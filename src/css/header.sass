@@ -1,0 +1,58 @@
+header
+    width: minmax(0, 100%)
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+
+    .logo
+        .title
+            display: block
+            font-size: 24px
+        .subtitle
+            display: block
+    nav
+        width: auto
+        display: flex
+        text-align: center
+        #nav__menu
+            list-style: none
+            margin-bottom: auto
+            display: flex
+            .menu
+                position: relative
+                text-align: center
+                margin-left: 10px
+                margin-right: 10px
+                input
+                    background: #000000
+                    display: none
+                // はじめか隠す
+                .menu__item
+                    position: absolute
+                    top: 10
+                    // leftは親要素に追従させたいので記載しない
+                    height: 0
+                    overflow: hidden
+                    opacity: 0
+                    transition: 0.5s
+
+                    width: 10em
+                    list-style: none
+                    text-align: start
+                    padding: 0
+                    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, .5)
+                    background: #FFFFFF
+                    // x y ぼかし 拡大縮小
+                    li
+                        display: block
+                        border-bottom: solid 1px #999999
+                &:hover
+                    .menu__item
+                        height: auto
+                        opacity: 1
+                    
+        #search
+            margin-top: auto
+            margin-bottom: auto
+
+    

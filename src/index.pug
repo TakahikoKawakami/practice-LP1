@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+html(lang="ja")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        script(src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js")
+        script(src="https://code.jquery.com/jquery-3.3.1.js")
+        link(rel="stylesheet", href="css/root.css")
+        link(rel="stylesheet", href="css/test.css")
+        link(rel="stylesheet", href="css/header.css")
+        title Prarctice (Write)
+    body(ontouchstart="")
+        header
+            .logo
+                a.title(href="/") Write
+                .subtitle 書くためのテーマ
+            nav
+                ul#nav__menu
+                    li.menu
+                        a#home ホーム
+                        ul.menu__item
+                            li
+                                a → カスタマイズ
+                    li.menu
+                        a#page ページ
+                        ul.menu__item
+                            li 
+                                a アイキャッチ画像なしのページ
+                            li 
+                                a ページ（全幅テンプレート）
+                    li.menu
+                        a タイポグラフィー
+                    li.menu 
+                        a お問い合わせ
+                #search
+                    ion-icon(name="search")
+
+        .body
+        img(src="http://placehold.it/300x200")
+        //- script.
+        //-     $(function() {
+        //-         $('#home').click(function() {
+        //-             console.log('click');
+        //-             $(this).find(".menu__item").removeClass('.menu__item');
+        //-         })
+        //-     })

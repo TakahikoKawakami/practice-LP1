@@ -1,0 +1,11 @@
+html {
+  width: 100vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body {
+  display: block;
+  width: 90%;
+  place-items: center;
+}
