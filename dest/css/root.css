@@ -6,6 +6,6 @@ html {
 
 body {
   display: block;
-  width: 90%;
-  place-items: center;
+  padding-left: 5%;
+  padding-right: 5%;
 }

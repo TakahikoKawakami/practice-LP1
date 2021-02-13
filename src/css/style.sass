@@ -1,0 +1,44 @@
+.body
+    margin-right: auto
+    margin-left: auto
+    width: 100%
+    section
+        display: block
+        width: 100%
+        margin-bottom: 3rem
+        &#top__img
+            text-align: center
+            width: 100%
+            img
+                width: 100%
+                object-fit: cover
+    
+.article__list
+    list-style-type: none
+    padding-left: 0
+.article__list__item
+    display: grid
+    grid-template-columns: 10em 1fr
+    margin-bottom: 3rem
+    .date
+        color: #111111
+        test-align: left
+    .article
+        .article__title
+            display: block
+            margin-top: 0
+                
+        .article__summary
+            display: block
+.pager__container
+    ul
+        list-style-type: none
+        display: flex
+        justify-content: center
+        li
+            margin: .5rem
+            padding: 0.5rem 1rem
+
+            border: solid 1px #555
+        .pager__current
+            background: #aaaaaa
