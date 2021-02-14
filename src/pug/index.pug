@@ -5,10 +5,10 @@ html(lang="ja")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         script(src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js")
         script(src="https://code.jquery.com/jquery-3.3.1.js")
-        link(rel="stylesheet", href="css/root.css")
-        link(rel="stylesheet", href="css/test.css")
-        link(rel="stylesheet", href="css/header.css")
-        link(rel="stylesheet", href="css/style.css")
+        link(rel="stylesheet", href="dest/css/root.css")
+        link(rel="stylesheet", href="dest/css/test.css")
+        link(rel="stylesheet", href="dest/css/header.css")
+        link(rel="stylesheet", href="dest/css/style.css")
         title Prarctice (Write)
     body(ontouchstart="")
         header
@@ -45,79 +45,32 @@ html(lang="ja")
                     装飾を極限まで省いたデザインは、あなたの文章を主役にします。
             section
                 ul.article__list
-                    li.article__list__item
-                        .date 2018年9月1日
-                        .article
-                            h3.article__title
-                                a 書くためのテーマ 
-                            p.article__summary.
-                                Writeは文章を書く人のためのミニマルなWordPressテーマです。
-                                装飾を極限まで省いたデザインは、あなたの文章を主役にします。
-                    li.article__list__item
-                        .date 2018年3月5日
-                        .article
-                            h3.article__title
-                                a 画像付きの投稿
-                            p.article__summary.
-                                吾輩は猫である。名前はまだ無い。
-                                どこで生れたかとんと見当がつかぬ。
-                                何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。
-                                吾輩はここで始めて人間というものを見た。
-                    li.article__list__item
-                        .date 2018年3月5日
-                        .article
-                            h3.article__title
-                                a 引用付きの投稿
-                            p.article__summary.
-                                吾輩は猫である。名前はまだ無い。
-                                どこで生れたかとんと見当がつかぬ。
-                                何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。
-                                吾輩はここで始めて人間というものを見た。
-                                しかもあとで聞くとそれ…
-                    li.article__list__item
-                        .date 2018年3月5日
-                        .article
-                            h3.article__title
-                                a コメント付きの投稿
-                            p.article__summary.
-                                吾輩は猫である。名前はまだ無い。
-                                どこで生れたかとんと見当がつかぬ。
-                                何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。
-                                吾輩はここで始めて人間というものを見た。
-                                しかもあとで聞くとそれ…
-                    li.article__list__item
-                        .date 2018年3月3日
-                        .article
-                            h3.article__title
-                                a 我輩は猫である
-                            p.article__summary.
-                                吾輩は猫である。名前はまだ無い。
-                                どこで生れたかとんと見当がつかぬ。
-                                何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。
-                                吾輩はここで始めて人間というものを見た。
-                                しかもあとで聞くとそれ…
-                    li.article__list__item
-                        .date 2018年3月3日
-                        .article
-                            h3.article__title
-                                a 名前はまだ無い。どこで生まれたかとんと見当がつかぬ
-                            p.article__summary.
-                                吾輩は猫である。名前はまだ無い。
-                                どこで生れたかとんと見当がつかぬ。
-                                何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。
-                                吾輩はここで始めて人間というものを見た。
-                                しかもあとで聞くとそれ…
+                    for article in articleList
+                        li.article__list__item
+                            .date #{article.date}
+                            .article
+                                h3.article__title
+                                    a #{article.title}
+                                p.article__summary #{article.summary}
             section
                 .pager__container
                     ul
-                        li.pager__current 
-                            a 1
-                        li 
-                            a 2
-                        li 
-                            a 3
-                        li 
-                            a 次へ
+                        if prevPage != 0
+                            li 
+                                - var uri = "/" + prevPage
+                                a(href=uri) 前へ
+                        for page in pageList
+                            if page == currentPage
+                                li.pager__current
+                                    a #{page}
+                            else
+                                li
+                                    -var uri = "/" + page
+                                    a(href=uri) #{page}
+                        if nextPage != 0
+                            li 
+                                - var uri = "/" + nextPage
+                                a(href=uri) 次へ
         //- script.
         //-     $(function() {
         //-         $('#home').click(function() {
