@@ -32,4 +32,4 @@ const watchPugFiles = () =>
 // run npx gulp
 exports.default = () =>
     watchSassFiles();
-    watchPugFiles();
+    // watchPugFiles();

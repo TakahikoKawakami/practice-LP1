@@ -60,12 +60,19 @@ function index($path)
         $prevPage = $requestPage - 1;
     }
 
+    $recentArticleList = [
+        $database->articleList[0],
+        $database->articleList[1],
+        $database->articleList[2],
+    ];
+
     $args = [
         "articleList" => $articleList,
         "currentPage" => $requestPage,
         "nextPage" => $nextPage,
         "prevPage" => $prevPage,
         "pageList" => $pageList,
+        "recentArticleList" => $recentArticleList,
     ];
 
     $filePath = 'src/pug/index.pug';

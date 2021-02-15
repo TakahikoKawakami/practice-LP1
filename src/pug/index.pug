@@ -8,6 +8,7 @@ html(lang="ja")
         link(rel="stylesheet", href="dest/css/root.css")
         link(rel="stylesheet", href="dest/css/test.css")
         link(rel="stylesheet", href="dest/css/header.css")
+        link(rel="stylesheet", href="dest/css/footer.css")
         link(rel="stylesheet", href="dest/css/style.css")
         title Prarctice (Write)
     body(ontouchstart="")
@@ -33,8 +34,8 @@ html(lang="ja")
                         a タイポグラフィー
                     li.menu 
                         a お問い合わせ
-                #search
-                    ion-icon(name="search")
+            #search
+                ion-icon(name="search")
 
         .body
             section#top__img
@@ -71,6 +72,57 @@ html(lang="ja")
                             li 
                                 - var uri = "/" + nextPage
                                 a(href=uri) 次へ
+        hr
+        .footer__container
+            .profile__container
+                .profile__img
+                    img(src="http://placehold.it/100x100")
+                .profile__header
+                    .profile__name お名前
+                    ul.profile__social__list
+                        li.profile__social__list__item
+                            ion-icon(name="logo-twitter")
+                        li.profile__social__list__item
+                            ion-icon(name="logo-facebook")
+                        li.profile__social__list__item
+                            ion-icon(name="logo-instagram")
+                .profile__content.
+                    これはプロフィールウィジェットです。ここにはプロフィール画像・名前・自己紹介文・ソーシャルリンク（最大7つ）を設定することができます。
+            .footer__block
+                .footer__title フッター右
+                .footer__content.
+                    3つのフッター右ウィジェットエリアはフッターの右側に表示され、使用する数によって幅は自動的に調整されます。1つも使用しない場合は表示されません。
+            .footer__block
+                .footer__title 最近の投稿
+                .footer__content
+                    ul
+                        for article in recentArticleList
+                            li
+                                .footer__article__title #{article.title}
+                                .footer__article__date  #{article.date}
+            .footer__block
+                .footer__title カテゴリー
+                .footer__content
+                    ul
+                        li サンプル投稿
+                        li 投稿フォーマット
+                        li 普通の投稿
+                .footer__search サーチ
+                
+        hr
+        .footer2
+            .social__list
+                ul.profile__social__list
+                    li.profile__social__list__item
+                        ion-icon(name="logo-twitter")
+                    li.profile__social__list__item
+                        ion-icon(name="logo-facebook")
+                    li.profile__social__list__item
+                        ion-icon(name="logo-instagram")
+            .sign Powered by WordPress | Theme: Write by Themegraphy
+            .dummy
+
+                    
         //- script.
         //-     $(function() {
         //-         $('#home').click(function() {

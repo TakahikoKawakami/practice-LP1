@@ -1,0 +1,48 @@
+.footer__container
+    width: 100%
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr 1fr
+    grid-gap: 50px
+
+.profile__container
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-template-rows: auto auto
+    .profile__img
+        img
+            clip-path: circle(48px at 50% 50%)
+    .profile__header
+        margin-top: auto
+        margin-bottom: auto
+
+        .profile__name
+            margin: 0
+
+    .profile__content
+        grid-column: 1 / 3
+
+.profile__social__list
+    margin: 0
+    padding: 0
+    list-style: none
+    display: flex
+    justify-content: space-around
+    .profile__social__list__item
+        margin: 0
+        text-align: center    
+.footer__block
+    .footer__title
+        margin-bottom: 30px
+    .footer__content
+        ul
+            list-style-type: none
+            padding-left: 0
+            li
+                margin: 10px 0
+.footer2
+    width: 100%
+    margin-bottom: 5rem
+    display: flex
+    justify-content: space-between
+    .social__list
+        width: 10%
