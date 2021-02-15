@@ -1,132 +1,36 @@
-<!DOCTYPE html>
-html(lang="ja")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        script(src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js")
-        script(src="https://code.jquery.com/jquery-3.3.1.js")
-        link(rel="stylesheet", href="dest/css/root.css")
-        link(rel="stylesheet", href="dest/css/test.css")
-        link(rel="stylesheet", href="dest/css/header.css")
-        link(rel="stylesheet", href="dest/css/footer.css")
-        link(rel="stylesheet", href="dest/css/style.css")
-        title Prarctice (Write)
-    body(ontouchstart="")
-        header
-            .logo
-                a.title(href="/") Write
-                .subtitle 書くためのテーマ
-            nav
-                ul#nav__menu
-                    li.menu
-                        a#home ホーム
-                        ul.menu__item
-                            li
-                                a → カスタマイズ
-                    li.menu
-                        a#page ページ
-                        ul.menu__item
-                            li 
-                                a アイキャッチ画像なしのページ
-                            li 
-                                a ページ（全幅テンプレート）
-                    li.menu
-                        a タイポグラフィー
-                    li.menu 
-                        a お問い合わせ
-            #search
-                ion-icon(name="search")
-
-        .body
-            section#top__img
-                img(src="http://placehold.it/2000x1000")
-            section
-                p.
-                    Writeは文章を書く人のためのミニマルなWordPressテーマです。
-                    装飾を極限まで省いたデザインは、あなたの文章を主役にします。
-            section
-                ul.article__list
-                    for article in articleList
-                        li.article__list__item
-                            .date #{article.date}
-                            .article
-                                h3.article__title
-                                    a #{article.title}
-                                p.article__summary #{article.summary}
-            section
-                .pager__container
-                    ul
-                        if prevPage != 0
-                            li 
-                                - var uri = "/" + prevPage
-                                a(href=uri) 前へ
-                        for page in pageList
-                            if page == currentPage
-                                li.pager__current
-                                    a #{page}
-                            else
-                                li
-                                    -var uri = "/" + page
-                                    a(href=uri) #{page}
-                        if nextPage != 0
-                            li 
-                                - var uri = "/" + nextPage
-                                a(href=uri) 次へ
-        hr
-        .footer__container
-            .profile__container
-                .profile__img
-                    img(src="http://placehold.it/100x100")
-                .profile__header
-                    .profile__name お名前
-                    ul.profile__social__list
-                        li.profile__social__list__item
-                            ion-icon(name="logo-twitter")
-                        li.profile__social__list__item
-                            ion-icon(name="logo-facebook")
-                        li.profile__social__list__item
-                            ion-icon(name="logo-instagram")
-                .profile__content.
-                    これはプロフィールウィジェットです。ここにはプロフィール画像・名前・自己紹介文・ソーシャルリンク（最大7つ）を設定することができます。
-            .footer__block
-                .footer__title フッター右
-                .footer__content.
-                    3つのフッター右ウィジェットエリアはフッターの右側に表示され、使用する数によって幅は自動的に調整されます。1つも使用しない場合は表示されません。
-            .footer__block
-                .footer__title 最近の投稿
-                .footer__content
-                    ul
-                        for article in recentArticleList
-                            li
-                                .footer__article__title #{article.title}
-                                .footer__article__date  #{article.date}
-            .footer__block
-                .footer__title カテゴリー
-                .footer__content
-                    ul
-                        li サンプル投稿
-                        li 投稿フォーマット
-                        li 普通の投稿
-                .footer__search サーチ
-                
-        hr
-        .footer2
-            .social__list
-                ul.profile__social__list
-                    li.profile__social__list__item
-                        ion-icon(name="logo-twitter")
-                    li.profile__social__list__item
-                        ion-icon(name="logo-facebook")
-                    li.profile__social__list__item
-                        ion-icon(name="logo-instagram")
-            .sign Powered by WordPress | Theme: Write by Themegraphy
-            .dummy
-
-                    
-        //- script.
-        //-     $(function() {
-        //-         $('#home').click(function() {
-        //-             console.log('click');
-        //-             $(this).find(".menu__item").removeClass('.menu__item');
-        //-         })
-        //-     })
+extends _layout.pug
+block body
+    section#top__img
+        img(src="https://placehold.it/2000x1000")
+    section
+        p.
+            Writeは文章を書く人のためのミニマルなWordPressテーマです。
+            装飾を極限まで省いたデザインは、あなたの文章を主役にします。
+    section
+        ul.article__list
+            for article in articleList
+                li.article__list__item
+                    .date #{article.date}
+                    .article
+                        h3.article__title
+                            a #{article.title}
+                        p.article__summary #{article.summary}
+    section
+        .pager__container
+            ul
+                if prevPage != 0
+                    li 
+                        - var uri = "/" + prevPage
+                        a(href=uri) 前へ
+                for page in pageList
+                    if page == currentPage
+                        li.pager__current
+                            a #{page}
+                    else
+                        li
+                            -var uri = "/" + page
+                            a(href=uri) #{page}
+                if nextPage != 0
+                    li 
+                        - var uri = "/" + nextPage
+                        a(href=uri) 次へ

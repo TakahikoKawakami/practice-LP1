@@ -10,11 +10,16 @@ $request_uri = $_SERVER['REQUEST_URI'];
 $path = explode('/', $request_uri);
 
 if (PathManager::isIndexUri($path)) {
-    [
-        'filePath' => $filePath,
-        'args' => $args
-    ] = index($path);
+    $methodName = 'index';
 } 
+else {
+    $methodName = $path[1];
+}
+
+[
+    'filePath' => $filePath,
+    'args' => $args
+] = $methodName($path);
 
 $pug->displayFile($filePath, $args);
 return;
@@ -76,6 +81,23 @@ function index($path)
     ];
 
     $filePath = 'src/pug/index.pug';
+    return [
+        'filePath' => $filePath,
+        'args' => $args,
+    ];
+}
+
+function typography($path) {
+    $database = new Database();
+    $recentArticleList = [
+        $database->articleList[0],
+        $database->articleList[1],
+        $database->articleList[2],
+    ];
+    $filePath = 'src/pug/typography.pug';
+    $args = [
+        "recentArticleList" => $recentArticleList,
+    ];
     return [
         'filePath' => $filePath,
         'args' => $args,
