@@ -27,6 +27,10 @@
   transition: all 0.3s ease;
 }
 
+.form__search__group:focus-within {
+  border: solid 1px #dfdfdf;
+}
+
 .form__search__group:focus-within input {
   opacity: 1;
   width: 14rem;
