@@ -1,0 +1,23 @@
+extends _article.pug
+block article
+    link(rel="stylesheet", href="/dest/css/form.css")
+    h1.article__title お問い合わせ
+
+    p フォームを使うには Contact Form 7 をインストールして下さい。
+    p このフォームはデモです。ここからメッセージを送ることはできません。
+
+    form
+        .form__group
+            label.form__group__item(for="name") お名前 (必須)
+            input#name.form__group__item(type="text", name="")
+        .form__group
+            label.form__group__item(for="email") メールアドレス (必須)
+            input#email.form__group__item(type="email", name="")
+        .form__group
+            label.form__group__item(for="title") 題名
+            input#title.form__group__item(type="text", name="")
+        .form__group
+            label.form__group__item(for="content") メッセージ本文
+            textarea#content.form__group__item(name="kansou" rows="4" cols="40")
+        .form__group__submit
+            button 送信

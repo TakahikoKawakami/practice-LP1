@@ -1,243 +1,238 @@
-extends _layout.pug
-block body
-    link(rel="stylesheet", href="/dest/css/article.css")
-    .article__detail
-        section.article__top__img
-            img(src="https://placehold.it/2000x1000")
-        section.article__content
-            h1 タイポグラフィー
-            p.intro.
-                これはイントロダクションです。
-                ここに記事の概要を書きます。
-                このスタイルは&lt;p class="intro">&lt;/p>で囲むことによって表示することができます
+extends _article.pug
+block article
+    h1.article__title タイポグラフィー
+    p.intro.
+        これはイントロダクションです。
+        ここに記事の概要を書きます。
+        このスタイルは&lt;p class="intro">&lt;/p>で囲むことによって表示することができます
+    
+    h1 見出し1
+    p.
+        見出し1は基本的にタイトルに使われるものであり、
+        本文の中で使われることはありません。
+    h2 見出し2 
+    p.
+        見出し2は本文の中では最も大きな見出しになります。
+        使われる頻度が最も高い見出しです。
+    h3 見出し3
+    p.
+        見出し3は本文の中では見出し2に次いで大きな見出しになります。
+        こちらも使われることが多いでしょう。
+    h4 見出し4
+    p.
+        見出し4は本文の中では見出し3に次ぐ見出しになります。
+        見出し2や見出し3に比べて使われることは少なくなります
+    h5 見出し5
+    p.
+        見出し5は小さな見出しです。
+        見出しとして用意されてはいますが、使われることはほとんどありません。
+        本文の中で使われることはありません。
+    h6 見出し6
+    p.
+        見出し6は小さな見出しです。
+        見出しとして用意されてはいますが、使われることはほとんどありません。
+        本文の中で使われることはありません。
+    h2 引用（Blockquote）テスト
+    p 一行の引用。
+    blockquote
+        p ハングリーであれ、愚かであれ。
+    p cite参照を含む複数行の引用。
+    blockquote
+        p.
+            これは言語みたいなものだ。
+            アルファベットすなわち音階を学び、
+            文すなわちコードを学ぶ。
+            そしてやがてホーンと即興で会話するようになる。
+            即興で話すのはすばらしいことだと思うが、
+            私には決して会得できないだろう。
+            しかし音楽ともなれば、私は即座によろこんで会話する。
+            そう、それがジャズ音楽のすべてだ。
+        a(href='#') スタン・ゲッツ
+    p また、次のコードによってプルクオートを作成できます。
+    pre
+        p &lt;blockquote class="aligncenter">これは中央寄せのプルクオートです。&lt;/blockquote>
+        p &lt;blockquote class="alignleft">これは左寄せのプルクオートです。&lt;/blockquote>
+        p &lt;blockquote class="alignright">これは右寄せのプルクオートです。&lt;/blockquote>
+    h2 テーブル
+    table
+        thead
+            tr
+                th 社員
+                th 給料
+                th 
+        tbody
+            tr
+                th 山田太郎
+                td 1ドル
+                td スティーブ・ジョブズが必要なサラリーと同じ額
+            tr
+                th 田中花子
+                td 1,000万円
+                td ブログを書くために必要になる資金。
+            tr
+                th 山本次郎
+                td 1億円
+                td 百聞は一見にしかず、ということで、カメラマンはブロガーの100倍。
+            tr
+                th 中山愛子
+                td 10億円
+                td 特に理由は要りません。
+    dl
+        dt 定義リストスタイル
+        dd これは定義リストです。
+        dt 定義
+        dd 物事、領域、何かについての意味の正確な文章や説明: 詩を構成するものの定義。
+        dt ギャラリー
+        dd WordPress 2.5 から導入された、投稿に添付された画像を展示するための機能です。同じように、投稿を編集中にアップロードすると、そのファイルは「投稿に添付」されます。
+        dt Gravatar(グラバター)
+        dd グラバターとはグローバルに認識されるアバター (あるユーザーを表すグラフィックイメージや写真) です。グラバターはメールアドレスと紐づいていて、Gravatar.com サービスによって管理されています。このサービスを利用すると、ブログ所有者は自分のブログを設定することによりコメント欄にユーザーのグラバターを表示させることができます。
             
-            h1 見出し1
-            p.
-                見出し1は基本的にタイトルに使われるものであり、
-                本文の中で使われることはありません。
-            h2 見出し2 
-            p.
-                見出し2は本文の中では最も大きな見出しになります。
-                使われる頻度が最も高い見出しです。
-            h3 見出し3
-            p.
-                見出し3は本文の中では見出し2に次いで大きな見出しになります。
-                こちらも使われることが多いでしょう。
-            h4 見出し4
-            p.
-                見出し4は本文の中では見出し3に次ぐ見出しになります。
-                見出し2や見出し3に比べて使われることは少なくなります
-            h5 見出し5
-            p.
-                見出し5は小さな見出しです。
-                見出しとして用意されてはいますが、使われることはほとんどありません。
-                本文の中で使われることはありません。
-            h6 見出し6
-            p.
-                見出し6は小さな見出しです。
-                見出しとして用意されてはいますが、使われることはほとんどありません。
-                本文の中で使われることはありません。
-            h2 引用（Blockquote）テスト
-            p 一行の引用。
-            blockquote
-                p ハングリーであれ、愚かであれ。
-            p cite参照を含む複数行の引用。
-            blockquote
-                p.
-                    これは言語みたいなものだ。
-                    アルファベットすなわち音階を学び、
-                    文すなわちコードを学ぶ。
-                    そしてやがてホーンと即興で会話するようになる。
-                    即興で話すのはすばらしいことだと思うが、
-                    私には決して会得できないだろう。
-                    しかし音楽ともなれば、私は即座によろこんで会話する。
-                    そう、それがジャズ音楽のすべてだ。
-                a(href='#') スタン・ゲッツ
-            p また、次のコードによってプルクオートを作成できます。
-            pre
-                p &lt;blockquote class="aligncenter">これは中央寄せのプルクオートです。&lt;/blockquote>
-                p &lt;blockquote class="alignleft">これは左寄せのプルクオートです。&lt;/blockquote>
-                p &lt;blockquote class="alignright">これは右寄せのプルクオートです。&lt;/blockquote>
-            h2 テーブル
-            table
-                thead
-                    tr
-                        th 社員
-                        th 給料
-                        th 
-                tbody
-                    tr
-                        th 山田太郎
-                        td 1ドル
-                        td スティーブ・ジョブズが必要なサラリーと同じ額
-                    tr
-                        th 田中花子
-                        td 1,000万円
-                        td ブログを書くために必要になる資金。
-                    tr
-                        th 山本次郎
-                        td 1億円
-                        td 百聞は一見にしかず、ということで、カメラマンはブロガーの100倍。
-                    tr
-                        th 中山愛子
-                        td 10億円
-                        td 特に理由は要りません。
-            dl
-                dt 定義リストスタイル
-                dd これは定義リストです。
-                dt 定義
-                dd 物事、領域、何かについての意味の正確な文章や説明: 詩を構成するものの定義。
-                dt ギャラリー
-                dd WordPress 2.5 から導入された、投稿に添付された画像を展示するための機能です。同じように、投稿を編集中にアップロードすると、そのファイルは「投稿に添付」されます。
-                dt Gravatar(グラバター)
-                dd グラバターとはグローバルに認識されるアバター (あるユーザーを表すグラフィックイメージや写真) です。グラバターはメールアドレスと紐づいていて、Gravatar.com サービスによって管理されています。このサービスを利用すると、ブログ所有者は自分のブログを設定することによりコメント欄にユーザーのグラバターを表示させることができます。
-                    
-            h2 非順序リスト（ネスト化）
+    h2 非順序リスト（ネスト化）
+    ul
+        li リスト項目1
             ul
                 li リスト項目1
                     ul
                         li リスト項目1
-                            ul
-                                li リスト項目1
-                                li リスト項目2
-                                li リスト項目3
-                                li リスト項目4
                         li リスト項目2
                         li リスト項目3
                         li リスト項目4
                 li リスト項目2
                 li リスト項目3
                 li リスト項目4
-                    
-            h2 順序リスト（ネスト化）
+        li リスト項目2
+        li リスト項目3
+        li リスト項目4
+            
+    h2 順序リスト（ネスト化）
+    ol
+        li リスト項目1
             ol
                 li リスト項目1
                     ol
                         li リスト項目1
-                            ol
-                                li リスト項目1
-                                li リスト項目2
-                                li リスト項目3
-                                li リスト項目4
                         li リスト項目2
                         li リスト項目3
                         li リスト項目4
                 li リスト項目2
                 li リスト項目3
                 li リスト項目4
-                    
-            h2 HTML要素タグテスト
-            p 他のHTMLタグは
-                a(href="#") FAQ
-                | をご覧ください
-
-            strong 住所タグ
-            p 以下は住所の例です。&lt;address>タグを使用しています。
-            address.
-                〒100-0000 <br>
-                東京都千代田区1-1-1 <br>
-                日本
+        li リスト項目2
+        li リスト項目3
+        li リスト項目4
             
-            strong anchor タグ(リンク)
-            p これは &lt;anchor> (もしくはリンクとも呼ばれます) の例です。
+    h2 HTML要素タグテスト
+    p 他のHTMLタグは
+        a(href="#") FAQ
+        | をご覧ください
 
-            strong abbr タグ
-            p この abbr は文章の中にある &lt;abbr> タグの例です。
+    strong 住所タグ
+    p 以下は住所の例です。&lt;address>タグを使用しています。
+    address.
+        〒100-0000 <br>
+        東京都千代田区1-1-1 <br>
+        日本
+    
+    strong anchor タグ(リンク)
+    p これは &lt;anchor> (もしくはリンクとも呼ばれます) の例です。
 
-            strong Acronym タグ (HTML5 では非推奨)
-            p これは &lt;acronym> タグを使用した TLA です。
+    strong abbr タグ
+    p この abbr は文章の中にある &lt;abbr> タグの例です。
 
-            strong Big タグ(HTML5 では非推奨)
-            p このテストは大きな文字を表す &lt;big> タグの例ですが、このタグは HTML5 ではサポートされていません。
+    strong Acronym タグ (HTML5 では非推奨)
+    p これは &lt;acronym> タグを使用した TLA です。
 
-            strong Cite タグ
-            p “Code is poetry.” 
-                cite —WordPress
+    strong Big タグ(HTML5 では非推奨)
+    p このテストは大きな文字を表す &lt;big> タグの例ですが、このタグは HTML5 ではサポートされていません。
 
-            strong Code タグ
-            p 
-                code &lt;code>
-                | タグはこのように使います:
-                code word-wrap: break-word;
+    strong Cite タグ
+    p “Code is poetry.” 
+        cite —WordPress
 
-            strong Delete タグ
-            p 
-                code &lt;del>
-                | タグは
-                del 打ち消し線
-                | などで表現されますが、このタグは HTML5 ではサポートされていません (代わりに 
-                code &lt;strike>
-                | を使ってください)。
+    strong Code タグ
+    p 
+        code &lt;code>
+        | タグはこのように使います:
+        code word-wrap: break-word;
 
-            strong Emphasize タグ
-            p 
-                code &lt;em>
-                | タグは
-                em 文章の強調
-                | に使われます。欧文では斜体になっていることがよくあります。
+    strong Delete タグ
+    p 
+        code &lt;del>
+        | タグは
+        del 打ち消し線
+        | などで表現されますが、このタグは HTML5 ではサポートされていません (代わりに 
+        code &lt;strike>
+        | を使ってください)。
 
-            strong Insert タグ
-            p 
-                code &lt;ins>
-                | タグは
-                ins 挿入されたコンテンツ
-                | を意味します。
+    strong Emphasize タグ
+    p 
+        code &lt;em>
+        | タグは
+        em 文章の強調
+        | に使われます。欧文では斜体になっていることがよくあります。
 
-            strong Keyboard タグ
-            p このあまり知られていない 
-                code &lt;kbd> 
-                | タグは 
-                kbd Ctrl 
-                | のようにキーボードテキストをエミュレートします。通常、
-                code &lt;code>
-                | タグと同じようにスタイリングされます。
+    strong Insert タグ
+    p 
+        code &lt;ins>
+        | タグは
+        ins 挿入されたコンテンツ
+        | を意味します。
 
-            strong Preformatted タグ
-            p &lt;pre> タグは複数行のコードのスタイリングに使います。
-            pre.
-                .post-title {
-                    margin: 0 0 5px;
-                    font-weight: bold;
-                    font-size: 38px;
-                    line-height: 1.2;
-                    and here's a line of some really, really, really, really long text, just to see how the PRE tag handles it and to find out how it overflows;
-                }
+    strong Keyboard タグ
+    p このあまり知られていない 
+        code &lt;kbd> 
+        | タグは 
+        kbd Ctrl 
+        | のようにキーボードテキストをエミュレートします。通常、
+        code &lt;code>
+        | タグと同じようにスタイリングされます。
 
-            strong Quote タグ
-            q デベロッパーズ、デベロッパーズ, デベロッパーズ… 
-            p –スティーブ・バルマー
+    strong Preformatted タグ
+    p &lt;pre> タグは複数行のコードのスタイリングに使います。
+    pre.
+        .post-title {
+            margin: 0 0 5px;
+            font-weight: bold;
+            font-size: 38px;
+            line-height: 1.2;
+            and here's a line of some really, really, really, really long text, just to see how the PRE tag handles it and to find out how it overflows;
+        }
 
-            strong Strike タグ (HTML5 では非推奨)
-            p このタグは
-                strike 打ち消し線
-                | を表しています。
+    strong Quote タグ
+    q デベロッパーズ、デベロッパーズ, デベロッパーズ… 
+    p –スティーブ・バルマー
 
-            strong Strong タグ
-            p このタグは
-                strong 太字テキスト
-                | を表しています。
+    strong Strike タグ (HTML5 では非推奨)
+    p このタグは
+        strike 打ち消し線
+        | を表しています。
 
-            strong Subscript タグ
-            p Subscript タグ 
-                code &lt;sub>
-                | を使うと H
-                sub 2
-                | Oのような表示の際に「2」が下付きになります。
+    strong Strong タグ
+    p このタグは
+        strong 太字テキスト
+        | を表しています。
 
-            strong Superscript タグ
-            p Superscript 
-                code タグ &lt;sup>
-                | を使うと E = MC
-                sup 2 
-                | のような表示の際に「2」が上付きになります。
+    strong Subscript タグ
+    p Subscript タグ 
+        code &lt;sub>
+        | を使うと H
+        sub 2
+        | Oのような表示の際に「2」が下付きになります。
 
-            strong Teletype タグ (HTML5 では非推奨)
-            p 
-                code &lt;tt>
-                | はあまり使われないタグですが、テレタイプテキスト として通常
-                code &lt;code>
-                | タグのようにスタイル
+    strong Superscript タグ
+    p Superscript 
+        code タグ &lt;sup>
+        | を使うと E = MC
+        sup 2 
+        | のような表示の際に「2」が上付きになります。
 
-            strong Variable タグ
-            p 変数や引数を表す variables タグです。
+    strong Teletype タグ (HTML5 では非推奨)
+    p 
+        code &lt;tt>
+        | はあまり使われないタグですが、テレタイプテキスト として通常
+        code &lt;code>
+        | タグのようにスタイル
+
+    strong Variable タグ
+    p 変数や引数を表す variables タグです。
 

@@ -24,6 +24,7 @@ header
                 text-align: center
                 margin-left: 10px
                 margin-right: 10px
+                cursor: pointer
                 // はじめか隠す
                 .menu__item
                     position: absolute
@@ -44,13 +45,16 @@ header
                     li
                         display: block
                         border-bottom: solid 1px #999999
+                        a
+                            display: block
                 &:hover
                     .menu__item
                         height: auto
                         opacity: 1
                     
-        #search
-            margin-top: auto
-            margin-bottom: auto
-
+    #search
+        position: relative
+        margin-top: auto
+        margin-bottom: 0
+        font-size: 24px
     

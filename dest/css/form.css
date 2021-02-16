@@ -1,0 +1,45 @@
+.form__group {
+  width: 100%;
+  display: block;
+  margin-bottom: 2rem;
+}
+
+.form__group .form__group__item {
+  display: block;
+  align-items: center;
+}
+
+.form__search__group {
+  display: flex;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background: #ffffff;
+}
+
+.form__search__group input {
+  overflow: hidden;
+  opacity: 0;
+  border: none;
+  font-size: 12px;
+  width: 0;
+  height: 18px;
+  transition: all 0.3s ease;
+}
+
+.form__search__group:focus-within input {
+  opacity: 1;
+  width: 14rem;
+  z-index: 1;
+}
+
+button {
+  border: solid 1px #efefef;
+  background: #dfdfdf;
+  padding: 1rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: #efefef;
+}

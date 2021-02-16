@@ -104,6 +104,24 @@ function typography($path) {
     ];
 }
 
+function contact($path) {
+    $database = new Database();
+    $recentArticleList = [
+        $database->articleList[0],
+        $database->articleList[1],
+        $database->articleList[2],
+    ];
+    $filePath = 'src/pug/contact.pug';
+    $args = [
+        "recentArticleList" => $recentArticleList,
+    ];
+    return [
+        'filePath' => $filePath,
+        'args' => $args,
+    ];
+}
+
+
 class PathManager {
     public static function isIndexUri(array $path)
     {

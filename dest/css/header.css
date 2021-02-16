@@ -32,6 +32,7 @@ header nav #nav__menu .menu {
   text-align: center;
   margin-left: 10px;
   margin-right: 10px;
+  cursor: pointer;
 }
 
 header nav #nav__menu .menu .menu__item {
@@ -54,12 +55,18 @@ header nav #nav__menu .menu .menu__item li {
   border-bottom: solid 1px #999999;
 }
 
+header nav #nav__menu .menu .menu__item li a {
+  display: block;
+}
+
 header nav #nav__menu .menu:hover .menu__item {
   height: auto;
   opacity: 1;
 }
 
-header nav #search {
+header #search {
+  position: relative;
   margin-top: auto;
-  margin-bottom: auto;
+  margin-bottom: 0;
+  font-size: 24px;
 }

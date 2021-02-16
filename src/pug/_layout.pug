@@ -11,6 +11,7 @@ html(lang="ja")
         link(rel="stylesheet", href="/dest/css/header.css")
         link(rel="stylesheet", href="/dest/css/footer.css")
         link(rel="stylesheet", href="/dest/css/style.css")
+        link(rel="stylesheet", href="/dest/css/form.css")
         title Prarctice (Write)
     body(ontouchstart="")
         header
@@ -34,9 +35,12 @@ html(lang="ja")
                     li.menu
                         a(href="/typography/") タイポグラフィー
                     li.menu 
-                        a お問い合わせ
+                        a(href="/contact/") お問い合わせ
             #search
-                ion-icon(name="search")
+                form(action="#", method="get")
+                    .form__search__group(tabIndex='0')
+                        ion-icon(name="search")
+                        input#input__search(type="text", name="", placeholder="検索...")
 
         .body
             block body
@@ -75,7 +79,8 @@ html(lang="ja")
                         li サンプル投稿
                         li 投稿フォーマット
                         li 普通の投稿
-                .footer__search サーチ
+                form(action="#", method="get")
+                    input#input__search(type="text", name="", placeholder="検索...")
                 
         hr
         .footer2
@@ -93,8 +98,8 @@ html(lang="ja")
                     
         //- script.
         //-     $(function() {
-        //-         $('#home').click(function() {
+        //-         $('.form__search__group > button').click(function() {
         //-             console.log('click');
-        //-             $(this).find(".menu__item").removeClass('.menu__item');
+        //-             $(this).parent().find('input').show()
         //-         })
         //-     })
