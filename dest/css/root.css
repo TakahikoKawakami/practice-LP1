@@ -5,7 +5,6 @@
 }
 
 html {
-  width: 100vw;
   margin-left: auto;
   margin-right: auto;
   font-family: Georgia, '遊明朝', YuMincho, 'Hiragino Mincho ProN', Meiryo, serif;
@@ -13,9 +12,22 @@ html {
 
 body {
   display: block;
-  padding-left: 5%;
-  padding-right: 5%;
   font-size: 18px;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
 }
 
 h1 {

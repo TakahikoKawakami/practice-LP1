@@ -47,3 +47,7 @@ button {
 button:hover {
   background: #efefef;
 }
+
+#input__search {
+  width: 80%;
+}
