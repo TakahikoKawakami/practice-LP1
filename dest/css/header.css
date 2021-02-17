@@ -123,7 +123,7 @@ header .logo .subtitle {
 }
 
 @media screen and (min-width: 768px) {
-  header .barger input, header .barger label {
+  header .barger > input, header .barger > label {
     display: none;
   }
   header nav {
