@@ -33,7 +33,7 @@
 
 .article__list__item .date {
   color: #111111;
-  test-align: left;
+  text-align: left;
 }
 
 .article__list__item .article .article__title {

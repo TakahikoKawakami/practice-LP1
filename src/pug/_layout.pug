@@ -18,29 +18,34 @@ html(lang="ja")
             .logo
                 a.title(href="/") Write
                 .subtitle 書くためのテーマ
-            nav
-                ul#nav__menu
-                    li.menu
-                        a#home ホーム
-                        ul.menu__item
-                            li
-                                a → カスタマイズ
-                    li.menu
-                        a#page ページ
-                        ul.menu__item
-                            li 
-                                a アイキャッチ画像なしのページ
-                            li 
-                                a ページ（全幅テンプレート）
-                    li.menu
-                        a(href="/typography/") タイポグラフィー
-                    li.menu 
-                        a(href="/contact/") お問い合わせ
-            #search
-                form(action="#", method="get")
-                    .form__search__group(tabIndex='0')
-                        ion-icon(name="search")
-                        input#input__search(type="text", name="", placeholder="検索...")
+            .barger
+                input#barger__menu(type="checkbox", name="")
+                label(for="barger__menu")
+                    span
+                nav
+                    #nav__container
+                        ul#nav__menu
+                            li.menu
+                                a#home ホーム
+                                ul.menu__item
+                                    li
+                                        a → カスタマイズ
+                            li.menu
+                                a#page ページ
+                                ul.menu__item
+                                    li 
+                                        a アイキャッチ画像なしのページ
+                                    li 
+                                        a ページ（全幅テンプレート）
+                            li.menu
+                                a(href="/typography/") タイポグラフィー
+                            li.menu 
+                                a(href="/contact/") お問い合わせ
+                        #search
+                            form(action="#", method="get")
+                                .form__search__group(tabIndex='0')
+                                    ion-icon(name="search")
+                                    input.input__search(type="text", name="", placeholder="検索...")
 
         .body
             block body
@@ -80,7 +85,7 @@ html(lang="ja")
                         li 投稿フォーマット
                         li 普通の投稿
                 form(action="#", method="get")
-                    input#input__search(type="text", name="", placeholder="検索...")
+                    input.input__search(type="text", name="", placeholder="検索...")
                 
         hr
         .footer2
