@@ -19,7 +19,7 @@ block body
         .pager__container
             ul
                 if prevPage != 0
-                    li 
+                    li#prev 
                         - var uri = "/" + prevPage
                         a(href=uri) 前へ
                 for page in pageList
@@ -31,6 +31,6 @@ block body
                             -var uri = "/" + page
                             a(href=uri) #{page}
                 if nextPage != 0
-                    li 
+                    li#next 
                         - var uri = "/" + nextPage
                         a(href=uri) 次へ

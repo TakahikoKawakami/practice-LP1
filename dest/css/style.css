@@ -25,10 +25,21 @@
   padding-left: 0;
 }
 
-.article__list__item {
-  display: grid;
-  grid-template-columns: 18em 1fr;
-  margin-bottom: 3rem;
+@media screen and (min-width: 768px) {
+  .article__list__item {
+    display: block;
+  }
+  .article__list__item > * {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .article__list__item {
+    display: grid;
+    grid-template-columns: 18em 1fr;
+    margin-bottom: 3rem;
+  }
 }
 
 .article__list__item .date {

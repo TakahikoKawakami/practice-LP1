@@ -17,9 +17,14 @@
     list-style-type: none
     padding-left: 0
 .article__list__item
-    display: grid
-    grid-template-columns: 18em 1fr
-    margin-bottom: 3rem
+    @media screen and (min-width:768px) 
+        display: block
+        > *
+            display: block
+    @media screen and (min-width:768px) 
+        display: grid
+        grid-template-columns: 18em 1fr
+        margin-bottom: 3rem
     .date
         color: #111111
         text-align: left
