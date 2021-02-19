@@ -5,18 +5,20 @@ html(lang="ja")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         script(src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js")
         script(src="https://code.jquery.com/jquery-3.3.1.js")
+        - var root = "/practices/write/"
+        - var rootURI = "/write/"
         link(rel="stylesheet", href="https://use.fontawesome.com/releases/v5.15.1/css/all.css")
-        link(rel="stylesheet", href="/dest/css/root.css")
-        link(rel="stylesheet", href="/dest/css/test.css")
-        link(rel="stylesheet", href="/dest/css/header.css")
-        link(rel="stylesheet", href="/dest/css/footer.css")
-        link(rel="stylesheet", href="/dest/css/style.css")
-        link(rel="stylesheet", href="/dest/css/form.css")
+        link(rel="stylesheet", href=root+"dest/css/root.css")
+        link(rel="stylesheet", href=root+"dest/css/test.css")
+        link(rel="stylesheet", href=root+"dest/css/header.css")
+        link(rel="stylesheet", href=root+"dest/css/footer.css")
+        link(rel="stylesheet", href=root+"dest/css/style.css")
+        link(rel="stylesheet", href=root+"dest/css/form.css")
         title Prarctice (Write)
     body(ontouchstart="")
         header
             .logo
-                a.title(href="/") Write
+                a.title(href=rootURI) Write
                 .subtitle 書くためのテーマ
             .barger
                 input#barger__menu(type="checkbox", name="")
@@ -38,9 +40,9 @@ html(lang="ja")
                                     li 
                                         a ページ（全幅テンプレート）
                             li.menu
-                                a(href="/typography/") タイポグラフィー
+                                a(href=rootURI+"typography/") タイポグラフィー
                             li.menu 
-                                a(href="/contact/") お問い合わせ
+                                a(href=rootURI+"contact/") お問い合わせ
                         #search
                             form(action="#", method="get")
                                 .form__search__group(tabIndex='0')
