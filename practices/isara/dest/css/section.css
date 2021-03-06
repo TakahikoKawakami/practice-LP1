@@ -1,0 +1,195 @@
+section {
+  position: relative;
+  width: 100%;
+  padding-top: 30px;
+}
+
+section .section__footer {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 0;
+}
+
+section .background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -10;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+section .background.orange {
+  background: orange;
+}
+
+section .background.yellow {
+  background: yellow;
+}
+
+section .title {
+  width: 100%;
+  height: 100%;
+}
+
+section .title img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+section .container {
+  width: 100%;
+  height: 100%;
+}
+
+section .container > * {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+section .container.text__reverse {
+  color: white;
+}
+
+section .request__container button {
+  border-radius: 30px;
+  background: pink;
+}
+
+section ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+
+section ul.social {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section ul.what__to__learn > li {
+  margin: 0 auto;
+  width: 20%;
+}
+
+section ul.what__to__learn > li .circle {
+  width: 100%;
+  padding-top: 100%;
+  position: relative;
+}
+
+section ul.what__to__learn > li .circle > * {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+}
+
+section h1 {
+  color: black;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: -40px;
+  left: calc(50% - 25px);
+  font-size: 12px;
+  line-height: 50px;
+}
+
+section h2 {
+  width: 90%;
+  position: relative;
+  background: white;
+}
+
+section h2::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 40px;
+  height: 40px;
+  z-index: -1;
+  background: orange;
+}
+
+section h2::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  right: -5px;
+  width: 40px;
+  height: 40px;
+  z-index: -1;
+  background: orange;
+}
+
+section .section__footer.white__fade {
+  background: linear-gradient(to bottom, white 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+section .box {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  border: solid 2px orange;
+}
+
+section .box ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+section .box ul li {
+  padding: 0;
+}
+
+section .box ul li > * {
+  margin: 0;
+}
+
+section ol.step {
+  list-style-type: none;
+  counter-reset: item;
+  padding: 0;
+}
+
+section ol.step > li {
+  margin: 10px 30px;
+  background: white;
+  border-radius: 5px;
+}
+
+section ol.step > li::before {
+  counter-increment: item;
+  content: "step " counter(item);
+  display: block;
+  width: 80%;
+  margin: 5px auto;
+  background: orange;
+  border-radius: 5px;
+}
+
+section .area {
+  width: 100%;
+}
+
+section .area.blue {
+  background: blue;
+}
+
+section .circle {
+  border-radius: 50%;
+  background: orange;
+}

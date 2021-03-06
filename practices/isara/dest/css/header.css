@@ -1,0 +1,68 @@
+header {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+header .header__container {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+header #logo {
+  margin-top: auto;
+  margin-bottom: auto;
+  height: 100%;
+}
+
+header #logo .container {
+  height: 100%;
+  margin-left: 10px;
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  header #logo .container {
+    display: flex;
+    flex-flow: row-reverse;
+  }
+  header #logo .container #subtitle {
+    margin-top: auto;
+  }
+}
+
+header #request {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+header #request button {
+  margin: 0;
+  background: pink;
+}
+
+header #request button .content {
+  padding: 5px 20px;
+}
+
+header #request button .content > * {
+  margin: 0;
+}
+
+header #request button.lg {
+  margin-right: 30px;
+  border-radius: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  header #request button.lg {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  header #request button.sm {
+    display: none;
+  }
+}

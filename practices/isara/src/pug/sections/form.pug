@@ -1,0 +1,16 @@
+section.fade__white
+    h2 
+        |
+        i.fa.fa-file-text-o(aria-hidden="true")
+        | 資料請求フォーム
+    p まずは無料で資料請求からどうぞ
+    form.container
+        .form__group
+            input#lastName(type="text", name="lastName", placeholder="姓")
+        .form__group
+            input#firstName(type="text", name="firstName", placeholder="名")
+        .form__group
+            input#email(type="email", name="email", placeholder="メールアドレス")
+        .form__group
+            input#questions(type="textarea", name="questions", placeholder="質問などはこちら（空欄でもOKです）")
+        button.submit 送信

@@ -1,4 +1,5 @@
 <?php
+include 'vendor/autoload.php';
 
 $request_uri = explode('?', $_SERVER['REQUEST_URI'])[0];
 $path = explode('/', $request_uri);

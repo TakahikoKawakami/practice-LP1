@@ -1,0 +1,43 @@
+header
+    margin: 0
+    padding: 0
+    width: 100%
+
+    .header__container
+        height: 100%
+        display: flex
+        justify-content: space-between
+    #logo
+        margin-top: auto
+        margin-bottom: auto
+        height: 100%
+        .container
+            height: 100%
+            margin-left: 10px
+            display: block
+            @media screen and (min-width: 768px)
+                display: flex
+                flex-flow: row-reverse
+                #subtitle
+                    margin-top: auto
+                
+    #request
+        margin-top: auto
+        margin-bottom: auto
+        button
+            margin: 0
+            background: pink
+            .content
+                padding: 5px 20px
+                > *
+                    margin: 0
+            &.lg
+                margin-right: 30px
+                border-radius: 30px
+        @media screen and (max-width: 768px)
+            button.lg
+                display: none
+        @media screen and (min-width: 769px)
+            button.sm
+                display: none
+                

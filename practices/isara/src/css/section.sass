@@ -1,0 +1,147 @@
+@import "base"
+
+section
+    position: relative
+    width: 100%
+    padding-top: 30px
+    // padding-bottom: 30px
+    .section__footer
+        position: relative
+        width: 100%
+        height: 50px
+        margin-bottom: 0
+    .background
+        position: absolute
+        top: 0
+        left: 0
+        z-index: -10
+        width: 100%
+        height: 100%
+        object-fit: cover
+        &.orange
+            background: $color__section__background
+        &.yellow
+            background: $color__section__background2
+    .title 
+        width: 100%
+        height: 100%
+        img
+            width: 100%
+            height: 100%
+            object-fit: contain
+    .container
+        width: 100%
+        height: 100%
+        > *
+            width: 70%
+            margin-left: auto
+            margin-right: auto
+            text-align: center
+        &.text__reverse
+            color: white    
+
+    .request__container
+        button
+            border-radius: 30px
+            background: $color__button__request
+    ul
+        list-style-type: none
+        display: flex
+        justify-content: space-between
+        padding: 0
+
+        &.social
+            width: 50%
+            margin-left: auto
+            margin-right: auto
+        &.what__to__learn
+            > li
+                margin: 0 auto
+                width: 20%
+                .circle
+                    width: 100%
+                    padding-top: 100%
+                    position: relative
+                    >*
+                        position: absolute
+                        top: 50%
+                        left: 50%
+                        width: 100%
+                        transform: translate(-50%, -50%)
+
+
+    h1
+        color: black
+        position: absolute
+        width: 50px
+        height: 50px
+        top: -40px
+        left: calc(50% - 25px)
+        font-size: 12px
+        line-height: 50px
+
+    h2
+        width: 90%
+        position: relative
+        background: white
+        &::before
+            content: ""
+            position: absolute
+            top: -5px
+            left: -5px
+            width: 40px
+            height: 40px
+            z-index: -1
+            background: $color__section__background
+        &::after
+            content: ""
+            position: absolute
+            bottom: -5px
+            right: -5px
+            width: 40px
+            height: 40px
+            z-index: -1
+            background: $color__section__background
+
+    .section__footer
+        &.white__fade
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%)
+    
+    .box
+        width: 90%
+        margin-left: auto
+        margin-right: auto
+        border: solid 2px $color__section__background
+        ul
+            list-style-type: none
+            padding: 0
+            display: flex
+            justify-content: space-between
+            flex-wrap: wrap
+            li
+                padding: 0
+                > *
+                    margin: 0
+    ol.step
+        list-style-type: none
+        counter-reset: item
+        padding: 0
+        > li
+            margin: 10px 30px
+            background: white
+            border-radius: 5px
+            &::before
+                counter-increment: item
+                content: 'step 'counter(item)
+                display: block
+                width: 80%
+                margin: 5px auto
+                background: $color__section__background
+                border-radius: 5px
+    .area
+        width: 100%
+        &.blue
+            background: blue
+    .circle
+        border-radius: 50%
+        background: $color__section__background
