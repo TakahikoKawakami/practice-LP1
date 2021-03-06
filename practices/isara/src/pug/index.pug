@@ -9,6 +9,7 @@ html(lang="ja")
         - var rootURI = "/isara/"
         link(rel="stylesheet", href="https://use.fontawesome.com/releases/v5.15.1/css/all.css")
         link(rel="stylesheet", href=root+"dest/css/root.css")
+        link(rel="stylesheet", href=root+"dest/css/nav.css")
         link(rel="stylesheet", href=root+"dest/css/header.css")
         link(rel="stylesheet", href=root+"dest/css/section.css")
         link(rel="stylesheet", href=root+"dest/css/footer.css")
@@ -55,7 +56,17 @@ html(lang="ja")
         include sections/footer.pug
         script.
             $(function() {
-                $('#pagetop').on(click, function() {
-                    scrollTo(0,0);
+                $('#pagetop').hide();
+
+                $(window).scroll(function() {
+                    if ($(this).scrollTop() > 100) {
+                        $('#pagetop').fadeIn();
+                    } else {
+                        $('#pagetop').fadeOut();
+                    }
+                })
+                $('#pagetop').click(function() {
+                    $("body, html").animate({scrollTop: 0}, 500);
+                    return false;
                 })
             })

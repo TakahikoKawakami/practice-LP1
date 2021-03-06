@@ -1,0 +1,11 @@
+nav {
+  position: fixed;
+  z-index: 100;
+  right: 10px;
+  bottom: 10px;
+}
+
+nav #pagetop {
+  background: #cfcfcf;
+  padding: 10px 13px;
+}
