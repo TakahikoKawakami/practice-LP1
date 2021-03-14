@@ -27,11 +27,6 @@ header
             height: 100%
             margin-left: 10px
             display: block
-            @media screen and (min-width: 768px)
-                display: flex
-                flex-flow: row-reverse
-                #subtitle
-                    margin-top: auto
         #title
             text-align: left
             vertical-align: center
@@ -60,14 +55,42 @@ header
                     margin: 0
                 > img
                     width: 20px
-
+            &.sm
+                display: block
             &.lg
-                margin-right: 30px
-                border-radius: 30px
-        @media screen and (max-width: 768px)
-            button.lg
                 display: none
-        @media screen and (min-width: 769px)
-            button.sm
-                display: none
-                
+
+@media screen and (min-width: 768px)
+    header
+        #logo
+            height: 100%
+            margin-left: 10px
+            display: flex
+            flex-flow: row-reverse
+            #subtitle
+                margin-top: auto
+                margin-bottom: 10px
+                margin-left: 10px
+            #title
+                height: 80%
+                margin-top: auto
+                margin-bottom: auto
+                img
+                    height: 100%
+                    width: auto
+                    object-fit: contain
+                    
+        #request
+            height: 80%
+            margin-top: auto
+            margin-bottom: auto
+            button
+                &.lg
+                    display: block
+                    margin-right: 10px
+                    border-radius: 30px
+                &.sm
+                    display: none
+                .content
+                    height: 1rem
+                    margin: auto 20px
