@@ -1,147 +1,541 @@
 @import "base"
 
+.text__reverse
+    color: white    
+
+.text__small
+    font-size: $font__size__small
+    font-weight: 300
+.text__medium
+    font-size: $font__size__medium
+    font-weight: 600
+.text__lerge
+    font-size: $font__size__lerge
+    font-weight: 600
+.text__head
+    font-size: $font__size__head
+    font-weight: 600
+.text__italic
+    font-style: italic
+.text__start
+    text-align: start
+small
+    font-style: italic
+    text-decoration: underline
+
+h2
+    font-size: $font__size__lerge
 section
+    margin-top: 0
+    margin-bottom: 0
     position: relative
     width: 100%
-    padding-top: 30px
-    // padding-bottom: 30px
-    .section__footer
-        position: relative
-        width: 100%
-        height: 50px
-        margin-bottom: 0
-    .background
-        position: absolute
-        top: 0
-        left: 0
-        z-index: -10
+    padding: 30px 1px 1px 1px
+    &.no__padding__top
+        padding-top: 0
+.section__footer
+    position: relative
+    width: 100%
+    height: 50px
+    margin-bottom: 0
+    &.base
+        background: $color__section__background
+.section__image__header
+    position: relative
+    width: 90%
+    height: 120px
+    margin-bottom: 0
+.background
+    position: absolute
+    top: 0
+    left: 0
+    z-index: -10
+    width: 100%
+    height: 100%
+    object-fit: cover
+    &.orange
+        background: $color__section__background
+    &.base
+        background: $color__section__background
+    &.lite
+        background: $color__section__background2
+    &.white
+        background: $color__white
+    &.gray
+        background: $color__gray
+.title 
+    width: 100%
+    height: 100%
+    img
         width: 100%
         height: 100%
-        object-fit: cover
-        &.orange
-            background: $color__section__background
-        &.yellow
-            background: $color__section__background2
-    .title 
-        width: 100%
-        height: 100%
-        img
-            width: 100%
-            height: 100%
-            object-fit: contain
-    .container
-        width: 100%
-        height: 100%
-        > *
-            width: 70%
-            margin-left: auto
-            margin-right: auto
-            text-align: center
-        &.text__reverse
-            color: white    
-
-    .request__container
-        button
-            border-radius: 30px
-            background: $color__button__request
-    ul
-        list-style-type: none
-        display: flex
-        justify-content: space-between
-        padding: 0
-
-        &.social
-            width: 50%
-            margin-left: auto
-            margin-right: auto
-        &.what__to__learn
-            > li
-                margin: 0 auto
-                width: 20%
-                .circle
-                    width: 100%
-                    padding-top: 100%
-                    position: relative
-                    >*
-                        position: absolute
-                        top: 50%
-                        left: 50%
-                        width: 100%
-                        transform: translate(-50%, -50%)
-
-
-    h1
-        color: black
-        position: absolute
-        width: 50px
-        height: 50px
-        top: -40px
-        left: calc(50% - 25px)
-        font-size: 12px
-        line-height: 50px
-
-    h2
-        width: 90%
-        position: relative
-        background: white
-        &::before
-            content: ""
-            position: absolute
-            top: -5px
-            left: -5px
-            width: 40px
-            height: 40px
-            z-index: -1
-            background: $color__section__background
-        &::after
-            content: ""
-            position: absolute
-            bottom: -5px
-            right: -5px
-            width: 40px
-            height: 40px
-            z-index: -1
-            background: $color__section__background
-
-    .section__footer
-        &.white__fade
-            background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%)
-    
-    .box
-        width: 90%
+        object-fit: contain
+.container
+    width: 100%
+    height: 100%
+    padding-bottom: 30px
+    &.per80
+        width: 80%
+    &.per60
+        width: 60%
+    & > *
         margin-left: auto
         margin-right: auto
-        border: solid 2px $color__section__background
-        ul
-            list-style-type: none
-            padding: 0
+        // text-align: center
+    &.start__left
+        & > *
+            text-align: start
+.request__container
+    button
+        width: 90%
+        margin: 20px
+        border-radius: 50px
+        background: $color__button__request
+        color: $color__text__reverse
+        font-size: 1.5rem
+        .content
+            margin: 10px 0
+ul
+    list-style-type: none
+    display: flex
+    justify-content: space-between
+    padding: 0
+
+    &.normal__list
+        list-style-type: disc
+        display: block
+    &.notShowMobile
+        display: none
+    &.inline
+        justify-content: center
+        // width: 50%
+        margin-left: auto
+        margin-right: auto
+        > li
+            margin-right: 0px
+            margin-left: 5px
+    &.what__to__learn
+        > li
+            margin: 0 auto
+            width: 20%
+    &.block__list
+        display: block
+    &.accordion
+        display: block
+        li
+            background: $color__section__background2
+            margin: 10px
+            padding-top: 10px
+        &.white
+            li
+                background: $color__white
+                border: 2px solid gray
+                border-radius: 5px
+        .accordion__head
             display: flex
             justify-content: space-between
-            flex-wrap: wrap
-            li
+            position: relative
+            margin-bottom: 0
+            margin-left: 0
+            margin-right: 0
+                
+            .accordion__title
+                display: flex
+                justify-content: flex-start
+                margin: 0
                 padding: 0
+                // margin-right: 0
+                > img
+                    width: 40px
                 > *
-                    margin: 0
-    ol.step
+                    margin-right: 10px
+                    margin-left: 10px
+                    margin-top: auto
+                    margin-bottom: auto
+                    align-content: center
+            .open__label
+                display: none
+                font-size: 28px
+                font-weight: 600
+                text-align: center
+                margin-top: auto
+                margin-bottom: auto
+                margin-right: 10px
+            .close__label
+                display: block
+                font-size: 28px
+                font-weight: 600
+                text-align: center
+                margin-top: auto
+                margin-bottom: auto
+                margin-right: 10px
+        .accordion__content
+            // margin-bottom: -10px
+            text-align: left
+            display: block
+            visibility: hidden
+            max-height: 0
+            opacity: 0
+            transition: .3s ease
+            padding-left: 10px
+            padding-right: 10px
+            > *
+                margin-top: 0
+                margin-bottom: 0
+        .accordion__check
+            display: none
+            &:checked
+                ~.accordion__head
+                    > .open__label
+                        display: block
+                    > .close__label
+                        display: none
+                    
+                ~ .accordion__content
+                    visibility: visible
+                    opacity: 1
+                    max-height: 20rem
+                    padding-bottom: 10px
+
+.list__container
+    width: 90%
+    margin-bottom: 15px
+    margin-left: auto
+    margin-right: auto
+    border: 2px solid $color__base__blue
+    border-radius: 5px
+    background: $color__white
+    color: $color__text__black
+    display: grid
+    > p
+        width: 100%
+        margin-left: auto
+        margin-right: auto
+        margin-top: 0
+        margin-bottom: 0
+        padding-top: 20px
+        padding-bottom: 20px
+        background: $color__base__blue
+        font-size: $font__size__lerge
+        color: $color__text__reverse
+    > ul
+        display: block
+        width: 100%
+        margin-top: 0
+        margin-bottom: 0
+        > li
+            padding-top: 15px
+            padding-bottom: 15px
+            &:not(:last-child)
+                border-bottom: 1px solid #cfcfcf
+
+li
+    &.tagcard
+        width: 90%
+        display: flex
+        align-content: center
+        color: #111111
+        > div
+            margin: 10px
+            padding: 0
+            > img
+                border: 3px solid $color__section__background
+            > *
+                margin-top: auto
+                text-align: start
+        
+
+h1
+    color: black
+    position: absolute
+    width: 50px
+    height: 50px
+    top: -40px
+    left: calc(50% - 25px)
+    font-size: 12px
+    line-height: 50px
+
+    
+.section__title
+    margin: 10px auto
+    width: 90%
+    position: relative
+    background: $color__white
+    &.lite
+        background: $color__section__background2
+    &::before
+        content: ""
+        position: absolute
+        top: -5px
+        left: -5px
+        width: 40px
+        height: 40px
+        z-index: -1
+        background: $color__section__background
+    &::after
+        content: ""
+        position: absolute
+        bottom: -5px
+        right: -5px
+        width: 40px
+        height: 40px
+        z-index: -1
+        background: $color__section__background
+
+.section__title__reverse
+    // margin: 10px auto
+    width: 90%
+    position: relative
+    background: $color__section__background
+    color: $color__text__reverse
+    &.lite
+        background: $color__section__background2
+    &::before
+        content: ""
+        position: absolute
+        top: -5px
+        left: -5px
+        width: 40px
+        height: 40px
+        z-index: -1
+        background: $color__white
+        border: solid 2px
+        border-top: $color__white
+        border-left: $color__white
+    &::after
+        content: ""
+        position: absolute
+        bottom: -5px
+        right: -5px
+        width: 40px
+        height: 40px
+        z-index: -1
+        background: $color__white
+        border-bottom: $color__white
+        border-right: $color__white
+
+.brackets__white
+    width: 80%
+    padding: 10px
+    position: relative
+    color: $color__text__reverse
+    &.lite
+        background: $color__section__background2
+    &::before
+        content: ""
+        position: absolute
+        top: -5px
+        left: -5px
+        width: 40px
+        height: 40px
+        border-top: 5px solid $color__white
+        border-left: 5px solid $color__white
+    &::after
+        content: ""
+        position: absolute
+        bottom: -5px
+        right: -5px
+        width: 40px
+        height: 40px
+        border-bottom: 5px solid $color__white
+        border-right: 5px solid $color__white
+    
+.section__footer
+    &.white__fade
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%)
+    img
+        object-position: 0 100%
+
+.borderbox
+    width: 90%
+    margin-left: auto
+    margin-right: auto
+    border: solid 2px $color__section__background
+    border-radius: 5px
+    background: $color__white
+    ul
+        list-style-type: none
+        padding: 0
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        li
+            padding: 0
+            > *
+                margin: 0
+.memberbox
+    width: 90%
+    margin-left: auto
+    margin-right: auto
+    padding: 5px
+    border: solid 3px $color__white
+    position: relative
+    > .profile__image
+        position: absolute
+        top: -5%
+        left: 50%
+        width: 100%
+        transform: translate(-50%, -50%)
+    > .profile
+        margin-top: 50px
+        > *
+            margin-top: 0
+            margin-bottom: 10px
+.campaignbox
+    width: 90%
+    margin-left: auto
+    margin-right: auto
+    margin-bottom: 20px
+    padding: 5px
+    border: solid 3px $color__white
+    position: relative
+    .campagin__title
+        background: $color__section__background
+        position: absolute
+        top: -20px
+        left: 50%
+        width: 15rem
+        transform: translate(-50%, -50%)
+        font-size: $font__size__head
+        font-weight: 600
+        
+    
+ol
+    &.step
+        color: $color__text__black
         list-style-type: none
         counter-reset: item
         padding: 0
         > li
             margin: 10px 30px
+            padding: 5px
             background: white
             border-radius: 5px
             &::before
                 counter-increment: item
                 content: 'step 'counter(item)
+                color: $color__text__reverse
                 display: block
                 width: 80%
                 margin: 5px auto
                 background: $color__section__background
                 border-radius: 5px
-    .area
+    &.campaign
+        color: $color__text__reverse
+        list-style-type: none
+        counter-reset: item
+        padding: 0
         width: 100%
-        &.blue
-            background: blue
-    .circle
-        border-radius: 50%
+        > li
+            margin: 30px 30px
+            padding: 5px 5px 5px 120px
+            position: relative
+            &::before
+                position: absolute
+                top: 30px
+                left: 50px
+                display: inline-block
+                counter-increment: item
+                content: '特典'counter(item)
+                color: $color__section__background
+                background: $color__white
+                margin: 5px auto
+                padding: 30px
+                clip-path: circle(30px at 50% 50%)
+                transform: translate(-50%, -50%)
+            > *
+                marign-top: auto
+                margin-bottom: auto
+    
+.area
+    width: 100%
+    position: relative
+    padding-bottom: 10px
+    padding-top: 10px
+    z-index: -1
+    &.blue
+        background: $color__section__background3
+    &.base
         background: $color__section__background
+.ballon
+    padding-top: 30px
+    position: relative
+    &::after
+        content: ""
+        position: absolute
+        top: 100%
+        left: 50%
+        margin-left: -15px
+        border: 15px solid transparent
+        border-top: 15px solid $color__section__background
+
+.circle
+    border-radius: 50%
+    padding-top: auto 
+    padding-bottom: auto 
+    text-align: center
+    background: $color__section__background
+    color: $color__text__reverse
+    font-size: $font__size__small
+    &.reverse
+        background: $color__white
+        color: $color__text__base
+    .inline &
+        position: relative
+        width: 50px
+        height: 50px
+    >div
+        position: absolute
+        top: 50%
+        left: 50%
+        width: 100%
+        transform: translate(-50%, -50%)
+        img
+            width: 50%
+.image__circle
+    object-fit: contain
+    clip-path: circle(50px at 50% 50%)
+
+
+p, strong, h3
+    margin-bottom: 30px
+    &.marker
+        color: $color__text__marker
+    &.marker__base
+        color: $color__base
+mark
+    &.danger
+        color: $color__text__marker
+        background: $color__text__marker__background
+    &.bar
+        background: linear-gradient(transparent 70%, $color__text__marker__bar 70%);
+        font-weight: bold
+
+.brank
+    height: 100px
+
+.form__group
+    width: 100%
+    display: block
+    input
+        width: 100%
+        height: 3rem
+        border: none
+        margin: 10px auto
+    textarea
+        width: 100%
+        border: none
+        margin: 10px auto
+
+.img__container
+    width: 100%
+    img
+        width: 100%
+        height: 100%
+        obejct-fit: contain
+footer
+    margin-top: 0
+    margin-bottom: 0
+    position: relative
+    width: 100%
+    padding: 10px 1px 1px 1px

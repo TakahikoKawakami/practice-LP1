@@ -4,6 +4,9 @@ html body {
   width: 100%;
   text-align: center;
   scroll-behavior: smooth;
+  font-family: "qMmp5 Pro W3", "Hiragino Kaku Gothic Pro", "CI", Meiryo, Osaka, "lr oSVbN", "MS PGothic", sans-serif;
+  letter-spacing: 1.5px;
+  line-height: 1.6;
 }
 
 * {

@@ -10,50 +10,64 @@ section
         li 実案件を通して学ぶ
         li 帰国後の仕事獲得サポート付き
     
-    .container
-        ul
-            li
-                div
-                    img(src="https://placehold.it/150x150/ffff93/ffffff")
-                    p Skypeで事前コンサル
-                    input#no1(type="checkbox", name="")
-                div#no1_show
-                    p 現在のスキルの状況、パソコンの環境説明、渡航での注意点を話します。
-                    p 簡単なテストあり
-                    p iSaraでは受講料を稼げることを保障しています。従って、事前コンサル時点で簡単なテストを実施し、場合によってはお断りをしております。（テストの内容はPCの基礎知識に関するテストですので、普段からパソコンを利用する方でしたら問題ありません。テストはもちろん無料ですので、まずはお問い合わせください。）
-            li
-                div
-                    img(src="https://placehold.it/150x150/ffff93/ffffff")
-                    p 事前課題の提出
-                    input#no2(type="checkbox", name="")
-                div#no2_show
-                    p 出発前の１ヶ月前に事前課題を送ります。
-                    p ０から始めるプログラミング事前学習講座、環境構築の事前学習、jQueryの事前学習講座、Bootstrapの事前学習講座、PHP / Mysqlの事前講座
-                    p.
-                        課題は多いですが、ここで努力が必須です。プログラミングは高付加価値なスキルです。そのためには学習が必須です。回数無制限のチャットサポート付きですので、最初は努力してください。<br>
-                        また、参加者グループコミュニティも作成するので、横の繋がりでモチベーションを高めることもできます。
-            li
-                div
-                    img(src="https://placehold.it/150x150/ffff93/ffffff")
-                    p 現地に渡航
-                    input#no3(type="checkbox", name="")
-                div#no3_show
-                    p 到着日には空港でお出迎えし、初日のオリエンテーションを行います。滞在先は空港からすぐの出来たてシェアハウス。美味しいタイ料理などもご紹介します。
-                    p iSaraは『ノマド』フリーランス養成講座です。楽しいノマド体験ができるよう、バンコクでの生活はこちらでサポートします。
-            li
-                div
-                    img(src="https://placehold.it/150x150/ffff93/ffffff")
-                    p 実案件を通して学ぶ
-                    input#no4(type="checkbox", name="")
-                div#no4_show
-                    p 現役フリーランスが抱える案件に加え、クラウドソーシングを使って実案件をこなします。
-                    p 案件獲得のためのメールの書き方や見積りの仕方など、他のプログラミングスクールでは教えてくれない実務スキルを学ぶことができます。
-                    p ＊現役フリーランスがサポートします。
-            li
-                div
-                    img(src="https://placehold.it/150x150/ffff93/ffffff")
-                    p 帰国後の仕事獲得サポート付き
-                    input#no5(type="checkbox", name="")
-                div#no5_show
-                    p 経験年数の少ないフリーランスが高単価で継続的に仕事受注するコツ、それがチームを組むことです。
-                    p iSaraではフリーランスコミュニティを形成し、帰国後のエンジニアでも継続的に稼げる仕組みを提供します。もちろん、個人で十分に稼げるようになった場合はいつでも脱退できますし、制限などは何もありません。
+    ul.accordion
+        li
+            input.accordion__check#no1(type="checkbox", name="")
+            label(for="no1").accordion__head
+                div.accordion__title
+                    img(src="https://isara.life/wp-content/themes/isara_v2/img/skypeconsulting.png")
+                    p.text__lerge Skypeで事前コンサル
+                i.fas.fa-angle-down.close__label
+                i.fas.fa-angle-up.open__label
+            div.accordion__content#no1_show
+                p.text__medium 現在のスキルの状況、パソコンの環境説明、渡航での注意点を話します。
+                p.text__medium 簡単なテストあり
+                p.text__small iSaraでは受講料を稼げることを保障しています。従って、事前コンサル時点で簡単なテストを実施し、場合によってはお断りをしております。（テストの内容はPCの基礎知識に関するテストですので、普段からパソコンを利用する方でしたら問題ありません。テストはもちろん無料ですので、まずはお問い合わせください。）
+        li
+            input.accordion__check#no2(type="checkbox", name="")
+            label(for="no2").accordion__head
+                div.accordion__title
+                    img(src="https://isara.life/wp-content/themes/isara_v2/img/preworks.png")
+                    p.text__lerge 事前課題の提出
+                i.fas.fa-angle-down.close__label
+                i.fas.fa-angle-up.open__label
+            div.accordion__content#no2_show
+                p.text__medium 出発前の１ヶ月前に事前課題を送ります。
+                p.text__small ０から始めるプログラミング事前学習講座、環境構築の事前学習、jQueryの事前学習講座、Bootstrapの事前学習講座、PHP / Mysqlの事前講座
+                p.text__medium.
+                    課題は多いですが、ここで努力が必須です。プログラミングは高付加価値なスキルです。そのためには学習が必須です。回数無制限のチャットサポート付きですので、最初は努力してください。<br>
+                    また、参加者グループコミュニティも作成するので、横の繋がりでモチベーションを高めることもできます。
+        li
+            input.accordion__check#no3(type="checkbox", name="")
+            label(for="no3").accordion__head
+                div.accordion__title
+                    img(src="https://isara.life/wp-content/themes/isara_v2/img/flight.png")
+                    p.text__lerge 現地に渡航
+                i.fas.fa-angle-down.close__label
+                i.fas.fa-angle-up.open__label
+            div.accordion__content#no3_show
+                p.text__medium 到着日には空港でお出迎えし、初日のオリエンテーションを行います。滞在先は空港からすぐの出来たてシェアハウス。美味しいタイ料理などもご紹介します。
+                p.text__medium iSaraは『ノマド』フリーランス養成講座です。楽しいノマド体験ができるよう、バンコクでの生活はこちらでサポートします。
+        li
+            input.accordion__check#no4(type="checkbox", name="")
+            label(for="no4").accordion__head
+                div.accordion__title
+                    img(src="https://isara.life/wp-content/themes/isara_v2/img/personwithlight.png")
+                    p.text__lerge 実案件を通して学ぶ
+                i.fas.fa-angle-down.close__label
+                i.fas.fa-angle-up.open__label
+            div.accordion__content#no4_show
+                p.text__medium 現役フリーランスが抱える案件に加え、クラウドソーシングを使って実案件をこなします。
+                p.text__medium 案件獲得のためのメールの書き方や見積りの仕方など、他のプログラミングスクールでは教えてくれない実務スキルを学ぶことができます。
+                p.text__small ＊現役フリーランスがサポートします。
+        li
+            input.accordion__check#no5(type="checkbox", name="")
+            label(for="no5").accordion__head
+                div.accordion__title
+                    img(src="https://isara.life/wp-content/themes/isara_v2/img/jobsupport.png")
+                    p.text__lerge 帰国後の仕事獲得サポート付き
+                i.fas.fa-angle-down.close__label
+                i.fas.fa-angle-up.open__label
+            div.accordion__content#no5_show
+                p.text__medium 経験年数の少ないフリーランスが高単価で継続的に仕事受注するコツ、それがチームを組むことです。
+                p.text__medium iSaraではフリーランスコミュニティを形成し、帰国後のエンジニアでも継続的に稼げる仕組みを提供します。もちろん、個人で十分に稼げるようになった場合はいつでも脱退できますし、制限などは何もありません。

@@ -1,10 +1,11 @@
-section.fade__white
-    h2 
+section
+    .background.orange
+    h2.text__head
         |
-        i.fa.fa-file-text-o(aria-hidden="true")
+        i.far.fa-file-alt(aria-hidden="true")
         | 資料請求フォーム
-    p まずは無料で資料請求からどうぞ
-    form.container
+    p.text__medium まずは無料で資料請求からどうぞ
+    form.container.per80
         .form__group
             input#lastName(type="text", name="lastName", placeholder="姓")
         .form__group
@@ -12,5 +13,7 @@ section.fade__white
         .form__group
             input#email(type="email", name="email", placeholder="メールアドレス")
         .form__group
-            input#questions(type="textarea", name="questions", placeholder="質問などはこちら（空欄でもOKです）")
-        button.submit 送信
+            textarea#questions(name="note", cols="90", rows="12", placeholder="質問などはこちら（空欄でもOKです）")
+        .request__container
+            button.request__button.lg
+                p.content 送信

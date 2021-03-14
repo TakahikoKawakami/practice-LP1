@@ -1,16 +1,28 @@
+@import "base"
+
 header
     margin: 0
     padding: 0
     width: 100%
+    height: 60px
+    position: sticky
+    z-index: 100
+    top: 0
+    background: $color__white
 
     .header__container
+        width: 100%
         height: 100%
         display: flex
         justify-content: space-between
     #logo
         margin-top: auto
         margin-bottom: auto
+        margin-left: 10px
+        padding-bottom: 0
+        padding-top: 5px
         height: 100%
+        font-size: $font__size__small
         .container
             height: 100%
             margin-left: 10px
@@ -20,17 +32,35 @@ header
                 flex-flow: row-reverse
                 #subtitle
                     margin-top: auto
+        #title
+            text-align: left
+            vertical-align: center
+        #title > img
+            height: 30px
+            width: auto
+            object-fit: contain
                 
     #request
-        margin-top: auto
-        margin-bottom: auto
+        height: 100%
+        margin-top: 0
+        margin-bottom: 0
+        margin-right: 0
         button
+            height: 100%
+            padding: 0
             margin: 0
-            background: pink
+            background: $color__button__request
+            color: $color__text__reverse
+            font-size: $font__size__small
+            border: none
             .content
-                padding: 5px 20px
+                padding: 5px 10px
+                height: 100%
                 > *
                     margin: 0
+                > img
+                    width: 20px
+
             &.lg
                 margin-right: 30px
                 border-radius: 30px
