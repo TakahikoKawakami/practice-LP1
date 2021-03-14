@@ -52,6 +52,10 @@ section.no__padding__top {
   padding-top: 0;
 }
 
+section#top .title {
+  max-width: 340px;
+}
+
 .section__footer {
   position: relative;
   width: 100%;
@@ -727,4 +731,10 @@ footer {
   position: relative;
   width: 100%;
   padding: 10px 1px 1px 1px;
+}
+
+@media screen and (min-width: 768px) {
+  #top .container {
+    max-width: 768px;
+  }
 }
