@@ -26,16 +26,20 @@ small
 h2
     font-size: $font__size__lerge
 section
+    -webkit-box-sizing: border-box
     margin-top: 0
     margin-bottom: 0
     position: relative
     width: 100%
-    padding: 30px 1px 1px 1px
+    padding-top: 30px
     &.no__padding__top
         padding-top: 0
     &#top
         .title
             max-width: 340px
+    .section__content
+        width: 100%
+        max-width: 1200px
 .section__footer
     position: relative
     width: 100%
@@ -98,17 +102,22 @@ section
         font-size: 1.5rem
         .content
             margin: 10px 0
+.notShowMobile
+    display: none
 ul
     list-style-type: none
     display: flex
-    justify-content: space-between
+    justify-content: space-around
     padding: 0
 
+    &.img__list
+        > li
+            max-width: 25%
+            img
+                max-width: 75%
     &.normal__list
         list-style-type: disc
         display: block
-    &.notShowMobile
-        display: none
     &.inline
         justify-content: center
         // width: 50%
@@ -123,85 +132,9 @@ ul
             width: 20%
     &.block__list
         display: block
-    &.accordion
-        display: block
-        li
-            background: $color__section__background2
-            margin: 10px
-            padding-top: 10px
-        &.white
-            li
-                background: $color__white
-                border: 2px solid gray
-                border-radius: 5px
-        .accordion__head
-            display: flex
-            justify-content: space-between
-            position: relative
-            margin-bottom: 0
-            margin-left: 0
-            margin-right: 0
-                
-            .accordion__title
-                display: flex
-                justify-content: flex-start
-                margin: 0
-                padding: 0
-                // margin-right: 0
-                > img
-                    width: 40px
-                > *
-                    margin-right: 10px
-                    margin-left: 10px
-                    margin-top: auto
-                    margin-bottom: auto
-                    align-content: center
-            .open__label
-                display: none
-                font-size: 28px
-                font-weight: 600
-                text-align: center
-                margin-top: auto
-                margin-bottom: auto
-                margin-right: 10px
-            .close__label
-                display: block
-                font-size: 28px
-                font-weight: 600
-                text-align: center
-                margin-top: auto
-                margin-bottom: auto
-                margin-right: 10px
-        .accordion__content
-            // margin-bottom: -10px
-            text-align: left
-            display: block
-            visibility: hidden
-            max-height: 0
-            opacity: 0
-            transition: .3s ease
-            padding-left: 10px
-            padding-right: 10px
-            > *
-                margin-top: 0
-                margin-bottom: 0
-        .accordion__check
-            display: none
-            &:checked
-                ~.accordion__head
-                    > .open__label
-                        display: block
-                    > .close__label
-                        display: none
-                    
-                ~ .accordion__content
-                    visibility: visible
-                    opacity: 1
-                    max-height: 20rem
-                    padding-bottom: 10px
-
 .list__container
     width: 90%
+    max-width: 768px
     margin-bottom: 15px
     margin-left: auto
     margin-right: auto
@@ -317,6 +250,31 @@ h1
         border-bottom: $color__white
         border-right: $color__white
 
+.brackets__base
+    width: 80%
+    padding: 10px
+    margin-bottom: 30px
+    position: relative
+    color: $color__text__black
+    &::before
+        content: ""
+        position: absolute
+        top: -5px
+        left: -5px
+        width: 40px
+        height: 40px
+        border-top: 5px solid $color__base
+        border-left: 5px solid $color__base
+    &::after
+        content: ""
+        position: absolute
+        bottom: -5px
+        right: -5px
+        width: 40px
+        height: 40px
+        border-bottom: 5px solid $color__base
+        border-right: 5px solid $color__base
+
 .brackets__white
     width: 80%
     padding: 10px
@@ -401,8 +359,9 @@ h1
         transform: translate(-50%, -50%)
         font-size: $font__size__head
         font-weight: 600
+.messagebox
+    width: 90%
         
-    
 ol
     &.step
         color: $color__text__black
@@ -543,7 +502,222 @@ footer
     width: 100%
     padding: 10px 1px 1px 1px
 
+.accordion
+    display: block
+    li
+        background: $color__section__background2
+        margin: 10px
+        padding-top: 10px
+    &.white
+        li
+            background: $color__white
+            border: 2px solid gray
+            border-radius: 5px
+    .accordion__head
+        display: flex
+        justify-content: space-between
+        position: relative
+        margin-bottom: 0
+        margin-left: 0
+        margin-right: 0
+            
+        .accordion__title
+            display: flex
+            justify-content: flex-start
+            margin: 0
+            padding: 0
+            // margin-right: 0
+            > img
+                width: 40px
+            > *
+                margin-right: 10px
+                margin-left: 10px
+                margin-top: auto
+                margin-bottom: auto
+                align-content: center
+        .open__label
+            display: none
+            font-size: 28px
+            font-weight: 600
+            text-align: center
+            margin-top: auto
+            margin-bottom: auto
+            margin-right: 10px
+        .close__label
+            display: block
+            font-size: 28px
+            font-weight: 600
+            text-align: center
+            margin-top: auto
+            margin-bottom: auto
+            margin-right: 10px
+    .accordion__content
+        // margin-bottom: -10px
+        text-align: left
+        display: block
+        visibility: hidden
+        max-height: 0
+        opacity: 0
+        transition: .3s ease
+        padding-left: 10px
+        padding-right: 10px
+        > *
+            margin-top: 0
+            margin-bottom: 0
+    .accordion__check
+        display: none
+        &:checked
+            ~.accordion__head
+                > .open__label
+                    display: block
+                > .close__label
+                    display: none
+                
+            ~ .accordion__content
+                visibility: visible
+                opacity: 1
+                max-height: 20rem
+                padding-bottom: 10px
+
 @media screen and (min-width: 768px)
+    .notShowMobile
+        display: block
+        width: 90%
+        > img
+            width: 100%
+            object-fit: contain
+
+    .showMobileOnly
+        display: none
     #top
         .container
             max-width: 768px
+    ol
+        &.step
+            width: 60%
+            max-width: 1100px
+
+    .section__image__header
+        width: 300px
+        height: 200px
+
+    .accordion.how__to__learn__list
+        display: block
+        li
+            margin-bottom: 50px
+            position: relative
+            display: flex
+            background: $color__section__background2
+            > *
+                padding: 20px
+            .accordion__title
+                display: block
+                margin: 0
+                padding: 0
+                width: 180px
+                > img
+                    width: 60px
+                > *
+                    margin-right: 10px
+                    margin-left: 10px
+                    margin-top: auto
+                    margin-bottom: auto
+                    align-content: center
+            .close__label, .open__label, .accordion__check
+                display: none
+            .accordion__check &:checked
+                ~.accordion__head
+                    .open__label, .close__label
+                        display: none
+            .accordion__content
+                text-align: start
+                visibility: visible
+                opacity: 1
+                max-height: 20rem
+                padding-bottom: 10px
+            &:not(:last-child)
+                &::after
+                    display: block
+                    width: 600px
+                    height: 100px
+                    position: absolute
+                    top: 100%
+                    left: 50%
+                    z-index: -1
+                    transform: translate(-50%, 0%)
+                    content: ""
+                    background-repeat: no-repeat
+                    background-size: contain
+            &:nth-child(even):not(:last-child)
+                &::after
+                    background-image: url("https://isara.life/wp-content/themes/isara_v2/img/flowline2.png")
+            &:nth-child(odd):not(:last-child)
+                &::after
+                    background-image: url("https://isara.life/wp-content/themes/isara_v2/img/flowline1.png")
+
+@media screen and (min-width: 1024px)
+    .notShowMobile
+        display: block
+        width: 90%
+        > img
+            width: 100%
+            object-fit: contain
+    .showMobileOnly
+        display: none
+    ol
+        &.step
+            display: flex
+            justify-content: space-between
+            width: 100%
+            color: $color__text__black
+            list-style-type: none
+            counter-reset: item
+            padding: 0
+            > li
+                margin: 10px 30px
+                padding: 5px
+                background: white
+                border-radius: 5px
+                width: 40%
+                &::before
+                    counter-increment: item
+                    content: 'step 'counter(item)
+                    color: $color__text__reverse
+                    display: block
+                    width: 80%
+                    margin: 5px auto
+                    background: $color__section__background
+                    border-radius: 5px
+                > *
+                    margin-bottom: 10px
+    .merits__list
+        display: flex
+        justify-content: space-between
+        width: 90%
+        margin-top: 30px
+        margin-bottom: 30px
+    .member__list
+        display: flex
+        justify-content: space-between
+        margin-top: 100px
+        width: 90%
+        .memberbox
+            width: 25%
+    .double__list
+        display: flex
+        justify-content: space-around
+        align-items: flex-start
+        max-width: 1024px
+        .list__container
+            width: 450px
+    .messagebox
+        margin-top: 30px
+        display: flex
+        justify-content: flex-start
+        align-items: flex-start
+        .img__container
+            width: 20%
+            img
+                object-fit: contain
+        .container
+            width: 70%
