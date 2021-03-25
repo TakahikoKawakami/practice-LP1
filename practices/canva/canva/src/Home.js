@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Calousel from './Carousel';
 import Header from './Header';
+import NewCard from './Card/NewCard';
 
 import './Home.css';
 
@@ -18,11 +19,19 @@ class Home extends Component {
                     <div className="section__header">
                         <h2>デザインを作成</h2>
                     </div>
-                    <Calousel>
-                        <p>slide1</p>
-                        <p>slide2</p>
-                        <p>slide3</p>
-                        <p>slide4</p>
+                    <Calousel swiperId={'newCards'}>
+                        <NewCard category="instagram" />
+                        <NewCard category="animation_sns" />
+                        <NewCard category="card" />
+                        <NewCard category="presentation" />
+                        <NewCard category="instagram" />
+                        <NewCard category="animation_sns" />
+                        <NewCard category="card" />
+                        <NewCard category="presentation" />
+                        <NewCard category="instagram" />
+                        <NewCard category="animation_sns" />
+                        <NewCard category="card" />
+                        <NewCard category="presentation" />
                     </Calousel>
                 </section>
 
@@ -31,7 +40,20 @@ class Home extends Component {
                         <h2>あなたのデザイン</h2>
                         <Link to="/design">すべて表示</Link>
                     </div>
-                    {/* <Calousel/> */}
+                    <Calousel swiperId={'yourDesign'} navigation={true}>
+                        <NewCard category="instagram" />
+                        <NewCard category="animation_sns" />
+                        <NewCard category="card" />
+                        <NewCard category="presentation" />
+                        <NewCard category="instagram" />
+                        <NewCard category="animation_sns" />
+                        <NewCard category="card" />
+                        <NewCard category="presentation" />
+                        <NewCard category="instagram" />
+                        <NewCard category="animation_sns" />
+                        <NewCard category="card" />
+                        <NewCard category="presentation" />
+                    </Calousel>
                 </section>
 
             </div>

@@ -4,9 +4,9 @@
     left: 0;
     z-index: 100;
     width: 100%;
-    background: pink;
     display: flex;
     justify-content: space-around;
+    background: white;
 }
 
 .nav__item {
