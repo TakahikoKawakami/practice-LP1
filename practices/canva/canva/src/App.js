@@ -30,7 +30,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Router>
+        <Router basename="/">
+        {/* <Router basename="/canva/"> */}
           <div>
             <Route exact path='/' component={Home}/>
             <Route path='/design' component={Design}/>

@@ -1,4 +1,4 @@
-import React, { Component , Children } from 'react';
+import React, { Component } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation } from 'swiper/core';
 import 'swiper/swiper-bundle.min.css';
@@ -12,7 +12,7 @@ class Carousel extends Component {
     render() {
         let navigationNextDom = '';
         let navigationPrevDom = '';
-        if (this.props.navigation == true) {
+        if (this.props.navigation === true) {
             navigationNextDom = (
                 <div className="swiper-button-next"/>
             );

@@ -6,7 +6,7 @@ class Card extends Component {
     renderImgTag() {
         if (this.props.image) {
             return (
-                <img src={this.props.image}/>
+                <img src={this.props.image} alt=""/>
             )
         } else {
             return;
@@ -14,13 +14,9 @@ class Card extends Component {
     }
 
     renderModalButton() {
-        if (this.props.cardType == "yourDesign") {
+        if (this.props.cardType === "yourDesign") {
             return (
-                // <div className="modal__button">
                 <DesignPopUp/>
-                // </div>
-                // <button className="modal__button" onClick={this.openModal()}>
-                // </button>
             )
         }
     }

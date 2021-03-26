@@ -12,16 +12,14 @@ class DesignPopUp extends Component {
     }
 
     handleOpenButtonClick() {
-        this.state.isShown = true;
         this.setState({
-            isShown: this.state.isShown
+            isShown: true
         })
     }
 
     handleCloseButtonClick() {
-        this.state.isShown = false;
         this.setState({
-            isShown: this.state.isShown
+            isShown: false
         })
     }
 

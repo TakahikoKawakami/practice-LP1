@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react';
+import React, { useState } from 'react';
 
 import './MenuList.sass';
 
@@ -23,7 +23,7 @@ const MenuList = (props) => {
     targetList(listObj);
     return (
         <ul>
-            {showName == props.list.floor && Object.keys(listObj).map((label) => {
+            {showName === props.list.floor && Object.keys(listObj).map((label) => {
                 return (
                     <li> 
                         <button onClick={() => { setShowName(label) }}>
