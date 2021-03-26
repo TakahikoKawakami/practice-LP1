@@ -8,19 +8,19 @@ class Navbar extends React.Component {
         <div className='Navbar'>
             <Link to="/">
                 <div className='nav__item'>
-                    <i class="fas fa-home"></i>
+                    <i className="fas fa-home"></i>
                     <p>Home</p>
                 </div>
             </Link>
             <Link to="/design">
                 <div className='nav__item'>
-                    <i class="fas fa-th-large"></i>
+                    <i className="fas fa-th-large"></i>
                     <p>Design</p>
                 </div>
             </Link>
             <Link to="/menu">
                 <div className='nav__item'>
-                    <i class="fas fa-bars"></i>
+                    <i className="fas fa-bars"></i>
                     <p>Menu</p>
                 </div>
             </Link>

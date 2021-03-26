@@ -1,0 +1,119 @@
+.Card {
+    position: relative;
+}
+
+.NewCard {
+    width: 100px;
+}
+
+.yourDesign {
+    width: 200px;
+}
+
+.InstagramTemplate {
+    width: 150px;
+}
+
+.InstagramTemplate .category-InstagramTemplate {
+    height: 150px;
+}
+
+.yourDesign .category-yourDesign {
+    height: 150px;
+}
+
+.NewCard .card__image {
+    background: #cfcfcf;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card__image img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.NewCard .category-instagram {
+    width: 60px;
+    height: 60px;
+}
+
+.NewCard .category-instagram::before, .category-animation_sns::before {
+    position: absolute;
+    width: auto;
+    height: auto;
+    content: "\f16d";
+    font-family: "Font Awesome 5 Brands";
+    font-size: 24px;
+    color: black;
+}
+
+.NewCard .category-card::before {
+    position: absolute;
+    width: auto;
+    height: auto;
+    content: "\f658";
+    font-family: "Font Awesome 5 Free";
+    font-size: 24px;
+    color: black;
+}
+
+.NewCard .category-poster::before {
+    position: absolute;
+    width: auto;
+    height: auto;
+    content: "\f03e";
+    font-family: "Font Awesome 5 Free";
+    font-size: 24px;
+    color: black;
+}
+
+.NewCard .category-animation_sns {
+    width: 60px;
+    height: 60px;
+}
+
+.NewCard .category-card {
+    width: 60px;
+    height: 40px;
+}
+
+.NewCard .category-poster {
+    width: 60px;
+    height: 100px;
+}
+
+.title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+.modal__button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    background: #cfcfcf;
+    opacity: 0.95;
+    text-align: center;
+    padding: 0;
+}
+
+.modal__button i {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.modal__button:hover {
+    background: #990099;
+}

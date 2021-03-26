@@ -1,0 +1,15 @@
+* {
+    text-align: start;
+}
+
+.design__container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.design__container .Card {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}

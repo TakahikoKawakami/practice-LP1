@@ -1,0 +1,39 @@
+// PopupMenu.scss
+.popup-menu-container {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    opacity: 0.95;
+}
+
+.popup-button {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    background: #cfcfcf;
+    text-align: center;
+    padding: 0;
+    &:hover {
+        background: #990099;
+    }
+}
+
+
+.popup-menu {
+    position: absolute;
+    z-index: 100;
+
+    width: 10rem;
+    height: 300px;
+    margin-top: 0.5rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background: #cfcfcf;
+
+    transform: scale(0);
+    transform-origin: top left;
+    transition: transform 0.2s;
+    &.shown {
+        transform: scale(1);
+    }
+}

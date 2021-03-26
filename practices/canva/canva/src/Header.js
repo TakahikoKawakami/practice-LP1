@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import './Header.css';
 
-export default () => {
+export default (props) => {
     return (
         <div className="header">
-            <input type='text' placeholder='\"ポストカードを試す\"'/>
+            {props.children}
         </div>
     );
 };
