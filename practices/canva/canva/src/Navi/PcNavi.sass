@@ -1,0 +1,49 @@
+.PcNavi
+    width: 100%
+    height: 100%
+    display: flex
+    justify-content: space-between
+    align-items: center
+    background: white
+
+    .pcnavi__logo, .pcnavi__yourIcon
+        width: 50px
+        height: 50px
+        background: #9999ff
+        clip-path: circle(25px at 50% 50%)
+        font-size: 42px
+        text-align: center
+        align-items: center
+            
+    .pcnavi__searchbox
+        width: 70%
+        height: 80%
+        padding-top: auto
+        padding-bottom: auto
+        input
+            width: 100%
+            margin-top: auto
+            margin-bottom: auto
+    
+    .pcnavi__setting
+        position: relative
+        width: 40px
+        height: 40px
+        &::before
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            display: block
+            content: '\f013'
+            font-family: 'Font Awesome 5 Free'
+            font-size: 24px
+
+    .pcnavi__newDesign__button     
+        background: #990099
+        border: none
+        border-radius: 5px
+        color: white
+        font-size: 14px
+        padding: 10px 20px
+

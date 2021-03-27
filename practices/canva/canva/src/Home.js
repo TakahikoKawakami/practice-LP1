@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import MediaQuery from 'react-responsive';
 import Calousel from './Carousel';
 import Header from './Header';
 import Card from './Card/Card';
@@ -156,9 +157,11 @@ class Home extends Component {
     render(){
         return(
             <div>
-                <Header>
-                    <input type='text' placeholder='\"ポストカードを試す\"'/>
-                </Header>
+                <MediaQuery query='(max-width: 767px)'>
+                    <Header>
+                        <input type='text' placeholder='\"ポストカードを試す\"'/>
+                    </Header>
+                </MediaQuery>
 
                 <div className="top">
                     <h2>ようこそ...</h2>

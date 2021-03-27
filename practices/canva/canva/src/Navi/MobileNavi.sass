@@ -1,0 +1,101 @@
+.nav__button__container
+    position: fixed
+    bottom: 70px
+    right: 30px
+    z-index: 200
+    color: white
+    width: 50px
+    height: 50px
+    background: pink
+    clip-path: circle(25px at 50% 50%)
+    .nav__button
+        width: 100%
+        height: 100%
+        display: block
+        position: relative
+        border: none
+        background: #990099
+        &::before
+            content: '\f067'
+            font-size: 32px
+            font-family: 'Font Awesome 5 Free'
+            color: white
+            display: block
+            // width: 100%
+            // height: 100%
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+        
+
+.menu__contents
+    position: fixed
+    top: 0
+    left: 0
+    width: 100vw
+    height: 100vh
+    z-index: 201
+    background: white
+    > *
+        width: 100%
+    *
+        margin-bottom: 20px
+
+
+.menu__contents__header
+    height: 40px
+    width: 100%
+    display: flex
+    justify-content: space-between
+    > input
+        width: 70%
+        height: 70%
+        margin-left: auto
+        margin-right: auto
+        margin-top: auto
+        margin-bottom: auto
+    > a
+        margin-right: 10px
+        margin-top: auto
+        margin-bottom: auto
+
+
+.menu__contents__recommends
+    ul
+        padding-left: 0
+
+.menu__contents__item
+    margin-left: 10px
+    &.custom::before
+        content: '\f067'
+        font-family: 'Font Awesome 5 Free'
+        margin-right: 10px
+    &.editPhoto::before
+        content: '\f03e'
+        font-family: 'Font Awesome 5 Free'
+        margin-right: 10px
+    &.presentation::before
+        content: '\f26c'
+        font-family: 'Font Awesome 5 Free'
+        margin-right: 10px
+    &.card::before
+        content: "\f658"
+        font-family: 'Font Awesome 5 Free'
+        margin-right: 10px
+    &.instagram::before
+        content: "\f16d"
+        font-family: 'Font Awesome 5 Brands'
+        margin-right: 10px
+    &.poster::before
+        content: '\f03e'
+        font-family: 'Font Awesome 5 Free'
+        margin-right: 10px
+    &.a4::before
+        content: '\f570'
+        font-family: 'Font Awesome 5 Free'
+        margin-right: 10px
+    &.logo::before
+        content: '\f19a'
+        font-family: 'Font Awesome 5 Brands'
+        margin-right: 10px

@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+import MediaQuery from 'react-responsive';
 import Navbar from './Navbar';
 import Home from './Home';
 import Design from './Design';
 import Menu from './Menu';
-// import NavItem from './NavItem';
+import MobileNavi from './Navi/MobileNavi';
+import PcHelp from './PcHelp';
+import Header from './Header';
+import PcNavi from './Navi/PcNavi';
 
 import './App.css';
 
@@ -30,15 +34,25 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <MediaQuery query='(min-width: 768px)'>
+          <Header height={'60px'}>
+            <PcNavi/>
+          </Header>
+        </MediaQuery>
+        <MediaQuery query='(min-width: 768px)'>
+          sidebar
+        </MediaQuery>
+        
         <Router basename="/">
-        {/* <Router basename="/canva/"> */}
           <div>
             <Route exact path='/' component={Home}/>
             <Route path='/design' component={Design}/>
-            <Route path='/menu' component={Menu}/>
+            {/* <Route path='/menu' component={Menu}/> */}
             <Navbar />
           </div>
         </Router>
+        <MobileNavi />
+        <PcHelp />
       </div>
     );
   }
