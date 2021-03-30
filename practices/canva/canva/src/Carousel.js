@@ -25,8 +25,8 @@ class Carousel extends Component {
                 <Swiper
                     spaceBetween={20}
                     slidesPerView={"auto"}
-                    onSlideChange={() => console.log('slide change')}
-                    onSwiper={(swiper)=> console.log(swiper)}
+                    // onSlideChange={() => console.log('slide change')}
+                    // onSwiper={(swiper)=> console.log(swiper)}
                     className="swiper__box"
                     navigation={
                         {

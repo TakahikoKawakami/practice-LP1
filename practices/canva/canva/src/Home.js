@@ -130,16 +130,17 @@ class Home extends Component {
     loadSections(start, end) {
         const result = this.state.view.map((item, id) => {
             return (
-                <section>
-                    <div className="section__header">
+                <section key={"section" + id}>
+                    <div key={'section__header' + id} className="section__header">
                         <h2>{item.title}</h2>
                         <Link to="/design">すべて表示</Link>
                     </div>
-                    <Calousel swiperId={item.category} navigation={true}>
+                    <Calousel key={'calousel' + id} swiperId={item.category} navigation={true}>
                     {
                         item.contents.map((contentItem, j) => {
                             return (
                                 <Card 
+                                    key={'card' + j}
                                     cardType={item.cardType}
                                     category={item.category}
                                     image={contentItem.image} 
@@ -172,18 +173,18 @@ class Home extends Component {
                         <h2>デザインを作成</h2>
                     </div>
                     <Calousel swiperId={'newCards'}>
-                        <Card cardType='NewCard' category="instagram"/>
-                        <Card cardType='NewCard' category="animation_sns" />
-                        <Card cardType='NewCard' category="card" />
-                        <Card cardType='NewCard' category="poster" />
-                        <Card cardType='NewCard' category="instagram" />
-                        <Card cardType='NewCard' category="animation_sns" />
-                        <Card cardType='NewCard' category="card" />
-                        <Card cardType='NewCard' category="poster" />
-                        <Card cardType='NewCard' category="instagram" />
-                        <Card cardType='NewCard' category="animation_sns" />
-                        <Card cardType='NewCard' category="card" />
-                        <Card cardType='NewCard' category="poster" />
+                        <Card key='1' cardType='NewCard' category="instagram"/>
+                        <Card key='2' cardType='NewCard' category="animation_sns" />
+                        <Card key='3' cardType='NewCard' category="card" />
+                        <Card key='4' cardType='NewCard' category="poster" />
+                        <Card key='5' cardType='NewCard' category="instagram" />
+                        <Card key='6' cardType='NewCard' category="animation_sns" />
+                        <Card key='7' cardType='NewCard' category="card" />
+                        <Card key='8' cardType='NewCard' category="poster" />
+                        <Card key='9' cardType='NewCard' category="instagram" />
+                        <Card key='10' cardType='NewCard' category="animation_sns" />
+                        <Card key='11' cardType='NewCard' category="card" />
+                        <Card key='12' cardType='NewCard' category="poster" />
                     </Calousel>
                 </section>
                 {this.loadSections(0, 0)}
